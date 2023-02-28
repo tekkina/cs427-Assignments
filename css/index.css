@@ -1,0 +1,23 @@
+body{
+    margin:0;
+}
+header {
+    background-color: rgb(140, 242, 147);
+    padding: 10px;
+    text-align: center;
+    color: rgb(87, 12, 56);
+    
+  }
+          a:link{text-decoration:none;}
+          footer {
+    background-color: rgb(233, 229, 229);
+    padding: 30px;
+    font-size:10%;
+    text-align:left
+  
+  }
+footer{
+    position:fixed;
+    bottom:0;
+    width:100vw;
+}
