@@ -28,7 +28,7 @@ header div {
     top:3%;
 }
 
-
+a:link{text-decoration:none;}
 footer {
     background-color: rgb(233, 229, 229);
     padding: 30px;
