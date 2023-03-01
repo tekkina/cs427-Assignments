@@ -8,16 +8,19 @@ header {
     color: rgb(87, 12, 56);
     
   }
-          a:link{text-decoration:none;}
-          footer {
-    background-color: rgb(233, 229, 229);
-    padding: 30px;
-    font-size:10%;
-    text-align:left
-  
+  .list{
+    font-size:30px;
   }
-footer{
+a:link{text-decoration:none;}
+
+footer {
+    background-color: rgb(233, 229, 229);
+    padding: 10px 5px;
     position:fixed;
     bottom:0;
     width:100vw;
+
+  }
+pre{
+  font-size:15px;
 }
