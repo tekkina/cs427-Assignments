@@ -15,12 +15,19 @@ a:link{text-decoration:none;}
 
 footer {
     background-color: rgb(233, 229, 229);
-    padding: 10px 5px;
     position:fixed;
     bottom:0;
     width:100vw;
+    height:12vh;
 
   }
+  footer div{
+    display:inline-flex;
+}
+footer div div{
+  padding-right:20vw;
+  align-items:center;
+}
 pre{
   font-size:15px;
 }
