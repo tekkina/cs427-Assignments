@@ -90,12 +90,6 @@ width: 25vw;
 padding:0;
 margin-left: 5vw;    
     } 
-.decoreless{
- list-style-type:none;
- font-size:2em;
- padding-top:2vh;
- padding-left:5vw;
-}
 
 .hobby{
 background-color: darkseagreen;
