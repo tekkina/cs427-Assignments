@@ -62,9 +62,6 @@ border: 5px solid red;
       }
 header a:hover{
      box-shadow: 0 0 10px;
-}  
-main{
-    width:100vw;
 }
 .intro{
 padding-left:5vw;
@@ -91,7 +88,7 @@ list-style-type:none;
 background-color:green;
 width: 25vw;
 padding:0;
-margin: 5vw;    
+margin-left: 5vw;    
     } 
 .decoreless{
  list-style-type:none;
