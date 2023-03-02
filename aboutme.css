@@ -148,7 +148,7 @@ padding-top:2vh;
 .pingpong-note{
      font-size:20px;
      padding-bottom:1vh;
-     padding-left:5vh;
+     padding-left:5vw;
 }
 .pingpong-photo{
  border:10px solid brown;
@@ -157,7 +157,6 @@ padding-top:2vh;
  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtLRIXMreTXoYg30su2Ra6ANLnZqSLPfbCRw&usqp=CAU);
  width:60vw;
  height:30vh;
- padding:0;
  margin:10px;
  font-size:20px;
 }  
