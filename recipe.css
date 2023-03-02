@@ -72,7 +72,7 @@ header.titles>h1{
 }
 
 ul{
-    list-style-image: url('../images/pie/pie_icon.gif');
+    list-style-image: url('./images/pie/pie_icon.gif');
     text-decoration: none;
 }
 
