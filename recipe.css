@@ -10,10 +10,10 @@
     font-size: 11pt;
     font-family:Georgia, Garamond,serif;
     line-height: 1;
-    background-image: url('../images/pie/silverware.jpg');
-    background-position: right;
+    background-image: url('./images/pie/silverware.jpg');
+    background-position: center;
     background-repeat:repeat-y;
-    background-attachment:fixed;
+    background-attachment:scroll;
     color: #404040;
     
 }
