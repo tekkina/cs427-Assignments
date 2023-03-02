@@ -295,9 +295,9 @@ background-size: auto auto;
 background-clip: border-box;
 background-size: 200% auto;
 color: #fff;
-/* -webkit-background-clip: text;
+-webkit-background-clip: text;
 background-clip: text;
--webkit-text-fill-color: transparent; */
+-webkit-text-fill-color: transparent;
 animation: textclip 5s linear infinite;
 font-size: 5vw;
 }
