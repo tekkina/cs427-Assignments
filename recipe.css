@@ -71,7 +71,7 @@ header.titles>h1{
    margin-right:4vw;
 }
 
-ul{
+ul li{
     list-style-image: url('./images/pie/pie_icon.gif');
     text-decoration: none;
 }
