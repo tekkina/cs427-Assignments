@@ -31,3 +31,13 @@ footer div div{
 pre{
   font-size:15px;
 }
+.meditation{
+  width:10vw;
+  height:8vh;
+  padding-right:10vw;
+  }
+  .validator{
+  padding-left:2vw;
+  width:10vw;
+  height:5vh;
+  }
