@@ -274,7 +274,7 @@ list-style-type: none;
 }
 .extra-3{
 display:inline-block;
-transform: scale(-1, 1);
+transform: scale(-1, -1);
 color:blue;
 }
 
