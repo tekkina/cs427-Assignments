@@ -23,17 +23,16 @@
 
 <form method=get action ="http://mumstudents.org/params.php" class="forms">
 <label for="studentId">Student Id:</label>
-<input  name="studenId"  id ="studentId" type="text" placeholder="MIU123456">
+<input  name="studenId"  id ="studentId" type="text" placeholder="MIU123456" required>
 <lable for="email">E-Mail:</lable>
-<input type="text" id= "email" name="email" placeholder="tekeste@gmail.com"><br>
+<input type="text" id= "email" name="email" placeholder="tekeste@gmail.com" required><br>
 
 <lable for= "fName"> First Name:</lable>
-<input type ="text" id="fName" name ="fName" placeholder="Tekeste">
+<input type ="text" id="fName" name ="fName" placeholder="Tekeste" required>
 
 <label for="lName">Last Name:</label>
-<input type="text" id="lName" name="lName" placeholder="Teklehaimanot"><br>
+<input type="text" id="lName" name="lName" placeholder="Teklehaimanot" required><br>
 
-<form>
 <input type="radio" id="cs472" name="course name" value="WAP">
 <label for="cs472">WAP</label>
 
@@ -54,17 +53,20 @@
 <p>I here by declare that, I am the formentioned student account owner. i confirm that 
     I will be be punished if I am seeking another individual grade record.</p>
 
-  <input type="checkbox" id="consent" name="consent" value="true">
+  <input type="checkbox" id="consent" name="Identitiy-consent" value="true" required>
   <label for="consent"> I have agreed, its true.</label><br>
   <div class="aline">
   <input  type="submit" value="Submit">
   </div>
 </form>
-<a href="https://validator.w3.org/check?uri=https://tekkina.github.io/cs427-Assignments/ass-3-gradeform/grade.html" style="text-decoration:none;">
+
+<div>
+    <a href="https://validator.w3.org/check?uri=https://tekkina.github.io/cs427-Assignments/ass-3-gradeform/grade.html" style="text-decoration:none;">
     <img class="htmlvalidator" src="http://tekkina.github.io/my-wap-works/ass-2/images/w3c-html5-validation.jpeg" alt= "html validator"></a> 
 
      <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://tekkina.github.io/cs427-Assignments/ass-3-gradeform/style.css" style="text-decoration:none;">
-        <img class="cssvalidator" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a> 
+        <img class="cssvalidator" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+</div> 
 <footer>
     <div>
     <div class="beginfooter">
