@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Grade</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <h1>Retrieve your grade</h1>
+    <p>Name</p>
+    <p>student id</p>
+    <p> drop down menu wh assignent to choose</p>
+    <p>radio button for entrty</p>
+    <p>checkbox to confirm they are not lying and are looking there grade</p> -->
+<header>
+    <h1> Welcome to the MIU Grade portal</h1>
+</header>
+<div class="intro">
+    <p> The grade portal show students, only their recorded grades. if you have any question please contact your teacher. </p>
+    <p>Do not attempt to look at other person grade. It is illegal and punishable by the university. Please provide the required fields correctly to access your grades. </p>
+</div>
+
+<form method=get action ="http://mumstudents.org/params.php" class="forms">
+<label for="studentId">Student Id:</label>
+<input  name="studenId"  id ="studentId" type="text" placeholder="MIU123456">
+<lable for="email">E-Mail:</lable>
+<input type="text" id= "email" name="email" placeholder="tekeste@gmail.com"><br>
+
+<lable for= "fName"> First Name:</lable>
+<input type ="text" id="fName" name ="fName" placeholder="Tekeste">
+
+<label for="lName">Last Name:</label>
+<input type="text" id="lName" name="lName" placeholder="Teklehaimanot"><br>
+
+<form>
+<input type="radio" id="cs472" name="course name" value="WAP">
+<label for="cs472">WAP</label>
+
+<input type="radio" id="cs421" name="course name" value="Data Structure">
+<label for="cs421">Data Structure</label><br>
+
+<input type="radio" id="cs425" name="course name" value="SWE">
+<label for="cs425">SWE</label>
+
+<input type="radio" id="cs521" name="course name" value="EA">
+<label for="cs521">EA</label><br>
+
+<input type="radio" id="cs505" name="course name" value="WAA">
+<label for="cs505">WAA</label>
+
+<input type="radio" id="cs441" name="course name" value="Algorithm">
+<label for="cs441">Algorithm</label><br>
+<p>I here by declare that, I am the formentioned student account owner. i confirm that 
+    I will be be punished if I am seeking another individual grade record.</p>
+
+  <input type="checkbox" id="consent" name="consent" value="true">
+  <label for="consent"> I have agreed, its true.</label><br>
+  <div class="aline">
+  <input  type="submit" value="Submit">
+  </div>
+</form>
+<a href="https://validator.w3.org/check?uri=https://tekkina.github.io/cs427-Assignments/ass-3-gradeform/grade.html" style="text-decoration:none;">
+    <img class="htmlvalidator" src="http://tekkina.github.io/my-wap-works/ass-2/images/w3c-html5-validation.jpeg" alt= "html validator"></a> 
+
+     <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://tekkina.github.io/cs427-Assignments/ass-3-gradeform/style.css" style="text-decoration:none;">
+        <img class="cssvalidator" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a> 
+<footer>
+    <div>
+    <div class="beginfooter">
+   <p> prepared by: Tekeste T.</p>
+    <p>Course: WAP(CS472)</p>
+    </div>
+     <div class="midfooter">
+   <p>Html forms</p>
+    <p>refer w3cschools.com</p>
+     </div>
+    <div class="endfooter">
+    <p>March, 2023</p>
+    <p>MIU,Fairfield</p>
+   </div>
+    </div>
+</footer>
+</body>
+</html>
