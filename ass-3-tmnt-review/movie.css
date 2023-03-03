@@ -141,19 +141,18 @@ footer{
 }
 .css-validator{
 position:fixed;
-bottom:5vh;
+bottom:10vh;
 left:85vw;
-padding-top:1vw;
 width:10vw;
 height:5vh;
     }
     .html-validator{
         position:fixed;
-        bottom:10vh;
+        bottom:15vh;
         left:85vw;
-        padding-top:1vw;
         width:10vw;
-        height:5vh;
+        height:6vh;
+        padding-bottom:1vh;
             }
             
     
