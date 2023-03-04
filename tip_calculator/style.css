@@ -1,0 +1,38 @@
+
+
+h1{
+    text-align: center;
+}
+.fieldset{
+    border:1vw solid brown;
+    border-radius: 2vw;
+    width:40vw;
+    height:20vh;
+    margin-left:auto;
+    margin-right:auto;
+    line-height: 4vh;;
+}
+.legend{
+    border:.5vw solid rgb(247, 143, 143);
+    border-radius: 1vw;
+    width:10vw;
+  
+    
+}
+
+.form{
+    margin-left:7vw;
+
+}
+span{
+margin-left: 0.5vw;
+}
+label{
+    width:11vw;
+    display:inline-block;
+    font-size:1.5em;
+}
+input, output{
+    font-size:1.5vw;
+    font-weight: bold;
+}
