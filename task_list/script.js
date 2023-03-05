@@ -1,10 +1,13 @@
-const todoList = [];
+var todoList = [];
 
+  function saveListData () { 
+    localStorage.setItem('myObject', JSON.stringify(todoList));
+}
+const accessListData = JSON.parse(localStorage.getItem('myObject'));
 const todoListElement = document.querySelector("#myUL");
-
 document.querySelector("#add_button").addEventListener("click", addTodo);
-document.querySelector("#myInput").addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
+document.querySelector("#myInput").addEventListener("keypress", function(e) {
+  if (e.key == 'Enter') {
     addTodo()
   }
 });
@@ -20,7 +23,9 @@ function addTodo() {
       todoText: todoText,
       isDone: false,
     };
-    todoList.unshift(todoObject);
+
+    todoList.push(todoObject);
+    saveListData();
     displayTodos();
   }
 }
@@ -45,8 +50,8 @@ function deleteItem(x) {
 function displayTodos() {
   todoListElement.innerHTML = "";
   document.querySelector("#myInput").value = "";
-
-  todoList.forEach((item) => {
+  todoList = accessListData;
+    todoList.forEach((item) => {
     const listElement = document.createElement("li");
     const delBtn = document.createElement("i");
 
@@ -76,3 +81,4 @@ function displayTodos() {
     listElement.appendChild(delBtn);
   });
 }
+displayTodos();
