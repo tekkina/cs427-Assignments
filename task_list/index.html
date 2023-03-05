@@ -1,48 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Task List Application</title>
-        <link href="./style.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="./index.js" ></script>
-    </head>
-    <body>
-            <header>
-                <h1>Task List</h1>
-            </header>
-
-         
-                <!-- <legend class="legend"><span>Calculate cost</span></legend> -->
-                <form  class="form">
-
-                   
-                       <label for="task">Task</label>
-                       <input type="text" id="task" name="task" placeholder="eneter your task here">
-                
-
-        
-                    <button onclick="newElement()" id="addtask">Add Task</button>
-                    <button  id="canceltasklist" name="canceltasklist">Cancel</button>
-            
-                </form>
-          
-                <div class="recordList"> Task list
-                <ul id="tasklist">
-                    <li>here</li>
-                    <li>we are</li>
-                </ul> 
-                </div>
-           
-        <!-- <footer>
-            <div>
-                <a href="https://validator.w3.org/check?uri=https://tekkina.github.io/cs427-Assignments/task_list/index.html" style="text-decoration:none;">
-                <img class="htmlvalidator" src="http://tekkina.github.io/my-wap-works/ass-2/images/w3c-html5-validation.jpeg" alt= "html validator"></a> 
-            
-                 <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://tekkina.github.io/cs427-Assignments/task_list/style.css" style="text-decoration:none;">
-                    <img class="cssvalidator" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
-            </div> 
-            </footer> -->
-    </body>
-
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous">
+</script>
+<title>ToDo List</title>
+</head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+      <input type="text" id="myInput" placeholder="Things to be done..." />
+      <span class="addBtn" id="add_button">Add</span>
+    </header>
+    <ul id="myUL">
+    </ul>
+    <script src="script.js"></script>
+  </body>
 </html>
