@@ -36,14 +36,13 @@ function doneTodo(todoId) {
   todoList[selectedTodoIndex].isDone
     ? (todoList[selectedTodoIndex].isDone = false)
     : (todoList[selectedTodoIndex].isDone = true);
+  saveListData();
   displayTodos();
 }
 
 function deleteItem(x) {
-  todoList.splice(
-    todoList.findIndex((item) => item.id == x),
-    1
-  );
+  todoList.splice(todoList.findIndex((item) => item.id == x));
+  saveListData();
   displayTodos();
 }
 
