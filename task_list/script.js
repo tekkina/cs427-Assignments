@@ -25,7 +25,7 @@ function addTodo() {
     };
 
     todoList.push(todoObject);
-    // saveListData();
+    saveListData();
     displayTodos();
   }
 }
@@ -50,7 +50,7 @@ function deleteItem(x) {
 function displayTodos() {
   todoListElement.innerHTML = "";
   document.querySelector("#myInput").value = "";
-  // todoList = accessListData;
+  todoList = accessListData;
     todoList.forEach((item) => {
     const listElement = document.createElement("li");
     const delBtn = document.createElement("i");
