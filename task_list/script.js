@@ -81,3 +81,4 @@ function displayTodos() {
     listElement.appendChild(delBtn);
   });
 }
+displayTodos();
