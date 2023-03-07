@@ -15,7 +15,8 @@ function decoration(){
 else  {
     text.style.backgroundColor ="white"; 
     btn.value="Bigger Decoration!"
-    btn.style.backgroundColor = "rgb(135, 102, 60)";
+    btn.style.backgroundColor = "rgba(146, 18, 137, 0.854)";
+    btn.style.color ="rgb(253, 215, 168)"
 }
 };  
 
