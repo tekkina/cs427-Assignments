@@ -34,31 +34,15 @@ function moreDecoration() {
         text.style.backgroundImage ="none";
     }
 
-}
-
-document.getElementById("bling").addEventListener("change",moreDecoration);
-document.getElementById("Btn").addEventListener('click',function(){
-  decoration();
-  timeControl();
-});
-malkovitchBtn.addEventListener('click',malkovitch);
-translateBtn.addEventListener('click',translate);
-
-function timeControl() {
-  if (timerId === null)
-    startTimer();
-  else 
-    stopTimer();
-};
-    
+  }
     function increaseFontSize() {
       var currentSize = parseInt(window.getComputedStyle(text).fontSize,10);
-      var newSize = currentSize + 20;
+      var newSize = currentSize + 2;
      text.style.fontSize =`${newSize}px`;
     }
     
     function startTimer() {
-      timerId = setInterval(increaseFontSize,5000);
+      timerId = setInterval(increaseFontSize,500);
     }
     
     function stopTimer() {
@@ -104,3 +88,18 @@ function malkovitch(){
     }
   }).join(" ");
 text.value = replacedText;};
+
+document.getElementById("bling").addEventListener("change",moreDecoration);
+document.getElementById("Btn").addEventListener('click',function(){
+  decoration();
+  timeControl();
+});
+malkovitchBtn.addEventListener('click',malkovitch);
+translateBtn.addEventListener('click',translate);
+
+function timeControl() {
+  if (timerId === null)
+    startTimer();
+  else 
+    stopTimer();
+};
