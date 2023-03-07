@@ -3,6 +3,7 @@ var btn =  document.getElementById("Btn");
 var checkedButton = document.getElementById("bling");
 var translateBtn = document.getElementById("secondBtn");
 var malkovitchBtn = document.getElementById("thirdBtn");
+var forthBtn = document.getElementById("forthBtn");
 var timerId = null; 
 var image = "url('https://courses.cs.washington.edu/courses/cse190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg')";
 
@@ -97,6 +98,10 @@ document.getElementById("Btn").addEventListener('click',function(){
 });
 malkovitchBtn.addEventListener('click',malkovitch);
 translateBtn.addEventListener('click',translate);
+forthBtn.addEventListener('click', function(){
+  text.value ="";
+} )
+
 
 function timeControl() {
   if (timerId === null)

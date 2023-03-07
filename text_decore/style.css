@@ -40,15 +40,15 @@ textarea {
 	text-align:center;
 }
 .fieldset_2{
-	width:25vw;
-	height:20vh;
+	width:30vw;
+	height:15vh;
 	margin-left:auto;
 	margin-right:auto;
 	border: 0.5vw solid orange;
 	border-radius: 1vw;
 	text-align:center;
 }
-#Btn,#secondBtn, #thirdBtn {
+#Btn,#secondBtn, #thirdBtn, #forthBtn{
 	margin-right:1vw;
 	margin-top:1vh;
 	border-radius: 10px;
@@ -57,14 +57,14 @@ textarea {
 	background-color:rgba(146, 18, 137, 0.854);
 }
 
-#secondBtn:hover, #Btn:hover, #thirdBtn:hover{
+#secondBtn:hover, #Btn:hover, #thirdBtn:hover, #forthBtn:hover{
 	transform:scale(1.2);
 	color:rgb(206, 112, 112);
 	background-color:rgb(56, 8, 160);
 }
-#secondBtn:active, #Btn:active, #thirdBtn:active{
+#secondBtn:active, #Btn:active, #thirdBtn:active, #forthBtn:active{
 	transform:scale(0.95);
-	box-shadow: 0 4px 4px yellow;
+	box-shadow: 0 4px 4px aqua;
 }
 footer{
 	position:fixed;
