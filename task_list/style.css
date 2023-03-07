@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); */
 
 * {
   margin: 0;
@@ -57,7 +57,6 @@ ul li {
   background: #eee;
   font-size: 14px;
   transition: 0.2s;
-  transform:scale(1.05);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width:80vw;
   margin-left:auto;
@@ -65,13 +64,14 @@ ul li {
   list-style-type:upper-roman;
 
 }
+ul li:hover{
+  box-shadow:-5px -5px 0 rgb(195, 233, 6);
+  transform:scale(1.05);
+  background: #ddd;
+}
 
 ul li:nth-child(odd) {
   background: #b2bec3;
-}
-
-ul li:hover {
-  background: #ddd;
 }
 
 ul li.checked {
@@ -94,7 +94,7 @@ ul li.checked::before {
 
 .far {
   position: absolute;
-  right: 0;
+  right: 60px;
   top: 0;
   padding: 12px 16px 12px 16px;
 }
@@ -102,7 +102,16 @@ ul li.checked::before {
   background-color: tomato;
   color: white;
 }
-
+.farr{
+  position: absolute;
+  right: 0px;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.farr:hover{
+  background-color: rgb(130, 241, 26);
+  color: white; 
+}
 footer{
   position:absolute;
   width:100%;

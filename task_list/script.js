@@ -41,7 +41,7 @@ function doneTodo(todoId) {
 }
 
 function deleteItem(x) {
-  todoList.splice(todoList.findIndex((item) => item.id == x));
+  todoList.splice(todoList.findIndex((item) => item.id == x),1);
   saveListData();
   displayTodos();
 }
@@ -53,14 +53,24 @@ function displayTodos() {
     todoList.forEach((item) => {
     const listElement = document.createElement("li");
     const delBtn = document.createElement("i");
+    const doneList = document.createElement("i");
 
     listElement.innerHTML = item.todoText;
     listElement.setAttribute("data-id", item.id);
+    delBtn.setAttribute("data-id", item.id);
+    doneList.setAttribute("data-id",item.id);
 
-    delBtn.setAttribute("data-id", item.id);
     delBtn.classList.add("far");
-    delBtn.classList.add("fa-trash-alt");
+    delBtn.classList.add("fa-trash-can");
+    delBtn.classList.add("fa-solid");
     delBtn.setAttribute("data-id", item.id);
+
+    doneList.classList.add("farr");
+    doneList.classList.add("fa-solid"); 
+    doneList.classList.add("fa-clipboard-check");
+    doneList.setAttribute("data-id",item.id);
+ 
+
 
     if (item.isDone) {
       listElement.classList.add("checked");
@@ -78,6 +88,7 @@ function displayTodos() {
 
     todoListElement.appendChild(listElement);
     listElement.appendChild(delBtn);
+    listElement.appendChild(doneList);
   });
 }
 displayTodos();
