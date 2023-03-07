@@ -1,51 +1,117 @@
-
+html{
+    background-color: rgb(239, 208, 168);
+}
 body{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 header{
-    width:100vw;
+  
     height:10vh;
-    border: 2vw solid lightgreen;
+    border-bottom: 3vw  solid lightgreen;
+    border-top:1vh solid lightgreen;
     background-color:darkkhaki;
+    border-left: 3vw solid lightgreen;
+    border-right: 3vw solid lightgreen;
+    
 }
+
 h1{
     text-align:center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 p{
-    color:rgb(254, 182, 1);
+    color:rgb(235, 58, 229);
     font-weight: bold;
     font-size:1.5vw;
+    text-align:center;
+}
+main{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2vh;
+    line-height: 4vh;
+   
+}
+section{
+    display:inline-flex;
+    height:28vh;
+}
+section>div{
+    margin-left:5vw;
+    margin-right:5vw;
+}
+hr{
+    border:2px dashed rgb(233, 76, 19);
+}
+
+#btn_1,#btn_2,#btn_3,#btn_4,#btn_5{
+    font-size:2vh;
+    background-color: cadetblue;
+
+}
+#btn_1:hover,#btn_2:hover,#btn_3:hover,#btn_4:hover,#btn_5:hover{
+    transform:scale(1.1);
+}
+#btn_1:active,#btn_2:active,#btn_3:active,#btn_4:active,#btn_5:active{
+    transform:scale(0.85);
 }
 footer{
-    position:absolute;
+    position:fixed;
     bottom:0;
     color: khaki;
     background-color: black;
     font-size:small;
     width:100vw;
-    height:10vw;
+    height:10vh;
 }
 footer>div{
     display:inline-flex;
     width:100%;
+align-items:last baseline;
+}
+input, #debitAccount,#depositAccount{
+    background-color: antiquewhite;
+}
+.labelblock{
+    display:inline-block;
+    width: 15vw;
+    text-align:left
+}
+.labelgapper{
+    margin-left:4vw;
+}
+#accountList{
+    background-color: burlywood;
 
+}
+h3{
+    line-height:2.5vh;
+    margin-bottom:0;
+}
+#accountfinder{
+    font-size:2.5vh;
 }
 .beginfooter{
     flex:4;
     text-align: center;
-    padding-top:1vw;
-
 }
 .midfooter{
-flex:4;
+flex:5;
 text-align: center;
-padding-top:1vw;
 }
 .endfooter{
     flex:4;
     text-align: center;
-    padding-top:1vw;
+}
+pre{
+    font-size:1vw;
+    margin-left:4vw;
+    margin-right:0.5vw;
+    text-align:left;
+}
+pre>a{
+    color:aqua;
 }

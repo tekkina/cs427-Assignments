@@ -7,88 +7,109 @@
   <link rel="stylesheet" href ="./style.css" type="text/css">
 </head>
 <body>
-    <hearder>
+<header>
 <h1> Wel come to Myestro City Bank</h1>
 <p>our customer satisfaction is our privillege!!</p>
-    </hearder>
-    <main>
+</header>
+
+<main>
   <div>
-    <label>Account Name: </label>
+    <label class="labelblock">Account Holder Name: </label>
     <input type="text" id="accountName">
   </div>
   <div>
-    <label>Deposit Amount: </label>
+    <label class="labelblock">Account Number: </label>
+    <input type="number" id="newDepositAccount">
+  </div>
+  <div>
+    <label class="labelblock">Initial Deposit Amount: </label>
     <input type="number" id="depositAmount">
   </div>
   <div>
-    <button onclick="createAccount()">Create New Account</button>
+    <button type = "submit" id ="btn_1" onclick="createAccount()">Create New Account</button>
   </div>
   <div>
-    <textarea id="accountList" rows="10" cols="30"></textarea>
+    <textarea id="accountList" rows="10" cols="80" readonly></textarea>
+  </div>
+  <div>
+       <h3>Customer Account Number</h3>
+        <input type="number" id="accountfinder"> 
   </div>
   
   <!-- Deposit Modal -->
+  <section>
   <div id="depositModal" class="modal">
     <div class="modal-content">
       <h2>Deposit Money</h2>
       <div>
-        <label>Account: </label>
-        <select id="depositAccount"></select>
-      </div>
-      <div>
+        <label>Account type: </label>
+        <select id="depositAccount">
+        <option selected>Savings Account</option>
+        <option>Checkings Account</option>
+      </select>
         <label>Amount: </label>
         <input type="number" id="depositAmountModal">
       </div>
       <div>
-        <button onclick="deposit()">Submit</button>
-        <button onclick="closeDepositModal()">Cancel</button>
+        <button type="submit" id="btn_2" onclick="deposit()">Submit</button>
+        <button type="submit" id="btn_3" onclick="closeDepositModal()">Cancel</button>
+        
+        
       </div>
     </div>
   </div>
-  
+  <hr><hr><hr><hr><hr><hr>
   <!-- Debit Modal -->
   <div id="debitModal" class="modal">
     <div class="modal-content">
-      <h2>Debit Money</h2>
+      <h2>Withdraw Money</h2>
       <div>
-        <label>Account: </label>
-        <select id="debitAccount"></select>
-      </div>
-      <div>
+
+        <label>Account type: </label>
+     <select id="debitAccount">
+        <option selected>Savings Account</option>
+        <option>Checkings Account</option>
+      </select>
+
         <label>Amount: </label>
         <input type="number" id="debitAmountModal">
       </div>
+
       <div>
-        <button onclick="debit()">Submit</button>
-        <button onclick="closeDebitModal()">Cancel</button>
+        <button type="submit" id="btn_4" onclick="debit()">Submit</button>
+        <button type="submit" id="btn_5" onclick="closeDebitModal()">Cancel</button>
       </div>
     </div>
   </div>
+</section>
 </main>
 
 <footer>
-    <div>
-    <div class="beginfooter">
-   <pre>
-    head office address: 1000 N 4th street, fairfield, Iowa
-    working hours: in person monday -friday 08:30 am - 05:30 pm
-    </pre>
-    </div>
-     <div class="midfooter">
-   <pre>
-    On call, customer service 24/7
-   <a href ="tel:+16141234543">Call (+1)614-123-4543</a>
-   <a href ="mailto:tteklehaimanot@miu.edu">tteklehaimanot@miu.edu</a>
-   </pre>
-     </div>
-    <div class="endfooter">
-    <pre>
-        March, 2023
-        Myestro City Bank,Fairfield
-        @copywrite 2022/myestrobank/2881</pre>
-   </div>
-    </div>
+<div>
+<div class="beginfooter">
+<pre>
+head office address:
+1000 N 4th street, fairfield, Iowa
+<a href ="tel:+16141234543">Call us: (+1)614-123-4543</a>
+<a href ="mailto:tteklehaimanot@miu.edu">Email us: tteklehaimanot@miu.edu</a>
+</pre>
+</div>
+<div class="midfooter">
+<pre>
+Working hours:
+On call, customer service 24/7
+in person monday -friday 08:30 am - 05:30 pm
+</pre>
+</div>
+<div class="endfooter">
+<pre>
+March, 2023
+Myestro City Bank,Fairfield
+@copywrite 2022/myestrobank/2881
+</pre>
+</div>
+</div>
 </footer>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

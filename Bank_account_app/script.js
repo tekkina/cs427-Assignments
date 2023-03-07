@@ -1,7 +1,8 @@
 class BankAccount {
-    constructor(name, initialDeposit) {
+    constructor(name, initialDeposit,accountNumber) {
       this._name = name;
       this._balance = initialDeposit;
+      this._accountNumber = accountNumber;
     }
     
     deposit(amount) {
@@ -12,7 +13,7 @@ class BankAccount {
       return false;
     }
     
-    debit(amount) {
+    withdraw(amount) {
       if (amount > 0 && amount <= this._balance) {
         this._balance -= amount;
         return true;
@@ -27,13 +28,18 @@ class BankAccount {
     get balance() {
       return this._balance;
     }
-    
+    get accountNumber() {
+      return this._balance;
+    }
     set name(name) {
       this._name = name;
     }
     
     set balance(balance) {
       this._balance = balance;
+    }
+    set accountNumber(accountNmuber) {
+      this._accountNmuber = accountNumber;
     }
   }
   
