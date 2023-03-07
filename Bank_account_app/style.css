@@ -1,0 +1,51 @@
+
+body{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+header{
+    width:100vw;
+    height:10vh;
+    border: 2vw solid lightgreen;
+    background-color:darkkhaki;
+}
+h1{
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    color:rgb(254, 182, 1);
+    font-weight: bold;
+    font-size:1.5vw;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    color: khaki;
+    background-color: black;
+    font-size:small;
+    width:100vw;
+    height:10vw;
+}
+footer>div{
+    display:inline-flex;
+    width:100%;
+
+}
+.beginfooter{
+    flex:4;
+    text-align: center;
+    padding-top:1vw;
+
+}
+.midfooter{
+flex:4;
+text-align: center;
+padding-top:1vw;
+}
+.endfooter{
+    flex:4;
+    text-align: center;
+    padding-top:1vw;
+}

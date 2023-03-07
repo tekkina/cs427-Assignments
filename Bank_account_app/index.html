@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Bank Accounts</title>
+  <link rel="stylesheet" href ="./style.css" type="text/css">
+</head>
+<body>
+    <hearder>
+<h1> Wel come to Myestro City Bank</h1>
+<p>our customer satisfaction is our privillege!!</p>
+    </hearder>
+    <main>
+  <div>
+    <label>Account Name: </label>
+    <input type="text" id="accountName">
+  </div>
+  <div>
+    <label>Deposit Amount: </label>
+    <input type="number" id="depositAmount">
+  </div>
+  <div>
+    <button onclick="createAccount()">Create New Account</button>
+  </div>
+  <div>
+    <textarea id="accountList" rows="10" cols="30"></textarea>
+  </div>
+  
+  <!-- Deposit Modal -->
+  <div id="depositModal" class="modal">
+    <div class="modal-content">
+      <h2>Deposit Money</h2>
+      <div>
+        <label>Account: </label>
+        <select id="depositAccount"></select>
+      </div>
+      <div>
+        <label>Amount: </label>
+        <input type="number" id="depositAmountModal">
+      </div>
+      <div>
+        <button onclick="deposit()">Submit</button>
+        <button onclick="closeDepositModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Debit Modal -->
+  <div id="debitModal" class="modal">
+    <div class="modal-content">
+      <h2>Debit Money</h2>
+      <div>
+        <label>Account: </label>
+        <select id="debitAccount"></select>
+      </div>
+      <div>
+        <label>Amount: </label>
+        <input type="number" id="debitAmountModal">
+      </div>
+      <div>
+        <button onclick="debit()">Submit</button>
+        <button onclick="closeDebitModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+    <div>
+    <div class="beginfooter">
+   <pre>
+    head office address: 1000 N 4th street, fairfield, Iowa
+    working hours: in person monday -friday 08:30 am - 05:30 pm
+    </pre>
+    </div>
+     <div class="midfooter">
+   <pre>
+    On call, customer service 24/7
+   <a href ="tel:+16141234543">Call (+1)614-123-4543</a>
+   <a href ="mailto:tteklehaimanot@miu.edu">tteklehaimanot@miu.edu</a>
+   </pre>
+     </div>
+    <div class="endfooter">
+    <pre>
+        March, 2023
+        Myestro City Bank,Fairfield
+        @copywrite 2022/myestrobank/2881</pre>
+   </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
