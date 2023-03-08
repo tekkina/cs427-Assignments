@@ -42,20 +42,18 @@ class BankAccount {
       this._accountNumber = accountNumber;
     }
   }
-  
-  // Bank class definition
+
+
   class Bank {
     static accountInfoList = [];
     static saveData(){
       localStorage.setItem('myObject',JSON.stringify(Bank.accountInfoList));
     }
     static accessCustomerList =()=> JSON.parse(localStorage.getItem('myObject'));
-    static accountName = document.getElementById("accountName").value;
-    static newAccountNumber = document.getElementById("newDepositAccount").value;
-    static depositAmount = parseFloat(document.getElementById("depositAmount").value);
+    // static accountName = document.getElementById("accountName").value;
+    // static newAccountNumber = document.getElementById("newDepositAccount").value;
+    // static depositAmount = parseFloat(document.getElementById("depositAmount").value);
     static accountListTextArea = document.getElementById("accountList");
-
-    //  throw new Error("error message"), instead of alert better to throe error message
    
     static cancel(){
       document.getElementById("accountList").value = "";
@@ -64,21 +62,18 @@ class BankAccount {
       Bank.renderAccountList();
     }
 
-    static createAccount() { 
-  //CHECK IF ACCOUNT DOESNOT EXIST
-function accountExist(number){
-// if(number==="" && number===0)
-// throw new error("please write an account number");
-const list = Bank.accessCustomerList().filter(account=>account._accountNumber===number);
-return (list.length>0)
+     static accountExist(number){
+      const list = Bank.accessCustomerList().filter(account=>account._accountNumber===number);
+      return (list.length>0)
+            }
+
+    static createAccount() {
+      if(Bank.accountExist(document.getElementById("newDepositAccount").value)){
+        alert("account number already exist, please create a different account number");
+        return;
       }
 
-      if(accountExist(document.getElementById("newDepositAccount").value)){
-      alert("account number already exist, please create a different account number");
-      return;
-      }
-
-     else if (document.getElementById("accountName").value.trim()!=="" && document.getElementById("newDepositAccount").value > 0 ) {
+     else if (document.getElementById("accountName").value.trim()!=="" && document.getElementById("depositAmount").value >= 100 ) {
         const account = new BankAccount(document.getElementById("accountName").value, parseFloat(document.getElementById("depositAmount").value),document.getElementById("newDepositAccount").value);
         Bank.accountInfoList.push(account);
         Bank.saveData();
@@ -86,24 +81,25 @@ return (list.length>0)
         alert("new account created.")
         return;
       }
-     return alert("error, please try again!! please make sure you typed name and deposit amount")
+     return alert("error, please try again!! please make sure you typed name and '\n' minimumof 100 dollars for initia deposit amount")
     }
     
     static renderAccountList() {
-      Bank.accountInfoList = JSON.parse(localStorage.getItem('myObject'));
-      Bank.saveData();
+      Bank.accountInfoList =JSON.parse(localStorage.getItem("myObject"));
+      Bank.accountListTextArea.innerHTML = "";
       Bank.accountInfoList.forEach((item)=> {
-      Bank.accountListTextArea.innerHTML += `account holder name: ${item._name}, account number: ${item._accountNumber},account Balance = ${item._balance} "\n" `
+      Bank.accountListTextArea.innerHTML += `account holder name: ${item._name}, account number: ${item._accountNumber},account Balance = ${item._balance} \n `
+
     });
-     document.getElementById("newDepositAccount").value ="";
-      document.getElementById("accountName").value = "";
-      document.getElementById("depositAmount").value= "";
+     document.getElementById("newDepositAccount").value="";
+      document.getElementById("accountName").innerHTML = "";
+      document.getElementById("depositAmount").innerHTML= "";
     }
      
     
 }
 var createAccountBtn = document.getElementById("btn_1");
-var cancel = document.getElementById("cancel");
+// var cancel = document.getElementById("cancel");
  createAccountBtn.addEventListener('click', Bank.createAccount);
- cancel.addEventListener('click',Bank.cancel);
+//  cancel.addEventListener('click',Bank.cancel);
  Bank.renderAccountList();
