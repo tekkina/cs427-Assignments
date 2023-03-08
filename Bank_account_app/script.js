@@ -29,7 +29,7 @@ class BankAccount {
       return this._balance;
     }
     get accountNumber() {
-      return this._balance;
+      return this._accountNumber;
     }
     set name(name) {
       this._name = name;
@@ -38,30 +38,72 @@ class BankAccount {
     set balance(balance) {
       this._balance = balance;
     }
-    set accountNumber(accountNmuber) {
-      this._accountNmuber = accountNumber;
+    set accountNumber(accountNumber) {
+      this._accountNumber = accountNumber;
     }
   }
   
   // Bank class definition
   class Bank {
     static accountInfoList = [];
-    
-    static createAccount() {
-      const accountName = document.getElementById("accountName").value;
-      const depositAmount = parseFloat(document.getElementById("depositAmount").value);
-      
-      if (accountName && depositAmount && depositAmount > 0) {
-        const account = new BankAccount(accountName, depositAmount);
-        this.accountInfoList.push(account);
-        this.updateAccountList();
-        return true;
+    static saveData(){
+      localStorage.setItem('myObject',JSON.stringify(Bank.accountInfoList));
+    }
+    static accessCustomerList =()=> JSON.parse(localStorage.getItem('myObject'));
+    static accountName = document.getElementById("accountName").value;
+    static newAccountNumber = document.getElementById("newDepositAccount").value;
+    static depositAmount = parseFloat(document.getElementById("depositAmount").value);
+    static accountListTextArea = document.getElementById("accountList");
+
+    //  throw new Error("error message"), instead of alert better to throe error message
+   
+    static cancel(){
+      document.getElementById("accountList").value = "";
+      Bank.accountInfoList =[];
+      Bank.saveData();
+      Bank.renderAccountList();
+    }
+
+    static createAccount() { 
+  //CHECK IF ACCOUNT DOESNOT EXIST
+function accountExist(number){
+// if(number==="" && number===0)
+// throw new error("please write an account number");
+const list = Bank.accessCustomerList().filter(account=>account._accountNumber===number);
+return (list.length>0)
       }
-      return false;
+
+      if(accountExist(document.getElementById("newDepositAccount").value)){
+      alert("account number already exist, please create a different account number");
+      return;
+      }
+
+     else if (document.getElementById("accountName").value.trim()!=="" && document.getElementById("newDepositAccount").value > 0 ) {
+        const account = new BankAccount(document.getElementById("accountName").value, parseFloat(document.getElementById("depositAmount").value),document.getElementById("newDepositAccount").value);
+        Bank.accountInfoList.push(account);
+        Bank.saveData();
+        Bank.renderAccountList();
+        alert("new account created.")
+        return;
+      }
+     return alert("error, please try again!! please make sure you typed name and deposit amount")
     }
     
-    static updateAccountList() {
-      const accountListTextArea = document.getElementById("accountList");
-      accountListTextArea.value = "";
+    static renderAccountList() {
+      Bank.accountInfoList = JSON.parse(localStorage.getItem('myObject'));
+      Bank.saveData();
+      Bank.accountInfoList.forEach((item)=> {
+      Bank.accountListTextArea.innerHTML += `account holder name: ${item._name}, account number: ${item._accountNumber},account Balance = ${item._balance} "\n" `
+    });
+     document.getElementById("newDepositAccount").value ="";
+      document.getElementById("accountName").value = "";
+      document.getElementById("depositAmount").value= "";
     }
+     
+    
 }
+var createAccountBtn = document.getElementById("btn_1");
+var cancel = document.getElementById("cancel");
+ createAccountBtn.addEventListener('click', Bank.createAccount);
+ cancel.addEventListener('click',Bank.cancel);
+ Bank.renderAccountList();
