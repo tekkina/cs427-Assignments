@@ -54,7 +54,16 @@ class BankAccount {
     // static newAccountNumber = document.getElementById("newDepositAccount").value;
     // static depositAmount = parseFloat(document.getElementById("depositAmount").value);
     static accountListTextArea = document.getElementById("accountList");
-   
+
+    static inputClear(){
+      document.getElementById("newDepositAccount").value="";
+       document.getElementById("accountName").value= "";
+       document.getElementById("depositAmount").value= "";
+       document.getElementById("deposit").value="";
+       document.getElementById("accountfinder").value ="";
+       document.getElementById("withdrawal").value =""; 
+     }
+
     static cancel(){
       // document.getElementById("accountList").value = "";
       Bank.accountInfoList =[];
@@ -66,51 +75,57 @@ class BankAccount {
     const accountFinder = document.getElementById("accountfinder").value;
       const list = Bank.accessCustomerList();
       let index = 0; 
-      list.forEach(account => account._index = index++)
+      list.forEach(account => account._index = index++);
+     
       const filteredList = list.filter(account => (account._accountNumber == accountFinder));
       // const filteredList = list.map(account => ({account,_index: index++}))
   
-      if(filteredList.length > 1){
-      alert("error, acount number found being registered more than one time in the system");
+      if(filteredList.length == 1){
+     const x = parseFloat(document. getElementById("deposit").value);
+     list[filteredList[0]._index]._balance +=x; 
+     Bank.accountInfoList = list;
+     Bank.saveData();
+     Bank.renderAccountList();
+     alert("deposit successfully completed.");
       return;
       }
 
-      else if(filteredList.length===0){
+      else{
       alert("account not found in the system, please make sure to write the correct account number");
+      Bank.inputClear();
       return;
       }
-      
-     list[filteredList._index]._balance += parseFloat(document. getElementById("deposit").value);
-       Bank.accountInfoList =list;
-       Bank.saveData();
-       Bank.renderAccountList();
-
     }
 
     static withdraw(){
-      var accountFinder = document.getElementById("accountfinder").value;
+      const accountFinder = document.getElementById("accountfinder").value;
       const list = Bank.accessCustomerList();
-      let index = 0;
-      const filteredList = list.map(account => ({account, _index: index++}))
-      .filter(account => (account._accountNumber === accountFinder));
-
-      if(filteredList.length > 1){
-      alert("error, acount number found being registered more than one time in the system");
+      let index = 0; 
+      list.forEach(account => account._index = index++);
+     
+      const filteredList = list.filter(account => (account._accountNumber == accountFinder));
+      // const filteredList = list.map(account => ({account,_index: index++}))
+  
+      if(filteredList.length == 1){
+     const x = parseFloat(document. getElementById("withdrawal").value);
+     if(filteredList[0]._balance < x ||filteredList[0]._balance === 0){
+      alert(`you can not withdraw ${x} dollars, you have an account balance of ${filteredList[0]._balance}`);
+      Bank.inputClear();
+      return;
+     }
+     list[filteredList[0]._index]._balance -=x; 
+     Bank.accountInfoList = list;
+     Bank.saveData();
+     Bank.renderAccountList();
+     alert("withdrawal successfully completed.");
       return;
       }
-      else if(filteredList.length===0 || filteredList===null){
+
+      else{
       alert("account not found in the system, please make sure to write the correct account number");
+      Bank.inputClear();
       return;
       }
-
-      else if ( Bank.accessCustomerList[filteredList._index]._balance < parseFloat(document. getElementById("withdrawal").value)){
-     alert(`the maximum money you can withdraw is ${Bank.accessCustomerList[filteredList.index]._balance}`)
-     return;
-      }
-
-       Bank.accessCustomerList[filteredList._index]._balance -= parseFloat(document. getElementById("withdrawal").value);
-       Bank.saveData();
-       Bank.renderAccountList();
 
     }
 
@@ -127,35 +142,34 @@ class BankAccount {
       }
       else if(Bank.accountExist(document.getElementById("newDepositAccount").value)){
         alert("account number already exist, please create a different account number");
+        Bank.inputClear();
         return;
       }
 
      else if (document.getElementById("accountName").value.trim()!=="" && document.getElementById("depositAmount").value >= 100 ) {
         const account = new BankAccount(document.getElementById("accountName").value, parseFloat(document.getElementById("depositAmount").value),document.getElementById("newDepositAccount").value);
+        account._index = Bank.accessCustomerList().length;
         Bank.accountInfoList.push(account);
         Bank.saveData();
         Bank.renderAccountList();
         alert("new account created.")
         return;
       }
-     return alert("error, please try again!! please make sure you typed name and '\n' minimumof 100 dollars for initia deposit amount")
+     alert("error, please try again!! please make sure you typed name and '\n' minimumof 100 dollars for initia deposit amount");
+     Bank.inputClear();
     }
     
     static renderAccountList() {
       Bank.accountInfoList =JSON.parse(localStorage.getItem("myObject"));
       Bank.accountListTextArea.innerHTML = "";
       Bank.accountInfoList.forEach((item)=> {
-      Bank.accountListTextArea.innerHTML += `account holder name: ${item._name}, account number: ${item._accountNumber},account Balance = ${item._balance} \n `
+      Bank.accountListTextArea.innerHTML += `${item._index +1}.  account holder name: ${item._name}, account number: ${item._accountNumber},account Balance = ${item._balance} \n`
 
     });
-     document.getElementById("newDepositAccount").value="";
-      document.getElementById("accountName").value= "";
-      document.getElementById("depositAmount").value= "";
-    }
-    
+   Bank.inputClear();
+  }
 }
-var createAccountBtn = document.getElementById("btn_1");
-
+const createAccountBtn = document.getElementById("btn_1");
  createAccountBtn.addEventListener('click', Bank.createAccount);
  document.getElementById("cancelBtn").addEventListener('click',Bank.cancel);
  document.getElementById("btn_2").addEventListener('click',Bank.deposit);
