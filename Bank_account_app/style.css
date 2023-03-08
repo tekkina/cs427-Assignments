@@ -81,7 +81,7 @@ footer>div{
     width:100%;
 align-items:last baseline;
 }
-input, #debitAccount,#depositAccount{
+input, #withdrawalAccount,#depositAccount{
     background-color: antiquewhite;
     font-size:2vh;
 }

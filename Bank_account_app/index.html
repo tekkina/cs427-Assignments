@@ -13,7 +13,6 @@
 </header>
 
 <main>
-  <form>
   <div>
     <label class="labelblock">Account Holder Name: </label>
     <input type="text" id="accountName" required>
@@ -37,7 +36,6 @@
        <h3>Customer Account Number</h3>
         <input type="number" id="accountfinder" required> 
   </div>
-  </form>
   
   <!-- Deposit Modal -->
   <section>
@@ -51,17 +49,17 @@
         <option>Checkings Account</option>
       </select>
         <label class="labelgapper">Amount: </label>
-        <input type="number" id="depositAmountModal">
+        <input type="number" id="deposit">
       </div>
       <div>
         <button type="submit" id="btn_2" onclick="deposit()">Submit</button>
-        <button type="submit" id="btn_3" onclick="closeDepositModal()">Cancel</button>
-        
-        
+        <button type="submit" id="btn_3" onclick="abortDeposit()">Cancel</button>
       </div>
     </div>
   </div>
+
   <hr><hr><hr><hr><hr><hr>
+
   <!-- Debit Modal -->
   <div id="debitModal" class="modal">
     <div class="modal-content">
@@ -69,18 +67,18 @@
       <div>
 
         <label>Account type: </label>
-     <select id="debitAccount">
+     <select id="withdrawalAccount">
         <option selected>Savings Account</option>
         <option>Checkings Account</option>
       </select>
 
         <label class="labelgapper">Amount: </label>
-        <input type="number" id="debitAmountModal" required>
+        <input type="number" id="withdrawal" required>
       </div>
 
       <div>
-        <button type="submit" id="btn_4" onclick="debit()">Submit</button>
-        <button type="submit" id="btn_5" onclick="closeDebitModal()">Cancel</button>
+        <button type="submit" id="btn_4" onclick="withdraw()">Submit</button>
+        <button type="submit" id="btn_5" onclick="abortWithdawal()">Cancel</button>
       </div>
     </div>
   </div>
