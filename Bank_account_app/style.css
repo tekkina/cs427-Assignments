@@ -46,24 +46,25 @@ section>div{
 }
 hr{
     border:2px dashed rgb(233, 76, 19);
+    
 }
 
-#btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#cancel{
+#btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#cancelBtn{
     font-size:2vh;
     background-color: cadetblue;
     margin-top:2vh;
 
 }
-#btn_1:hover,#btn_2:hover,#btn_3:hover,#btn_4:hover,#btn_5:hover,#cancel:hover{
+#btn_1:hover,#btn_2:hover,#btn_3:hover,#btn_4:hover,#btn_5:hover,#cancelBtn:hover{
     transform:scale(1.1);
     background-color: chartreuse;
 }
-#btn_1:active,#btn_2:active,#btn_3:active,#btn_4:active,#btn_5:active,#cancel:active{
+#btn_1:active,#btn_2:active,#btn_3:active,#btn_4:active,#btn_5:active,#cancelBtn:active{
     transform:scale(0.85);
     background-color: black;
     color:white;
 }
-#btn_3,#btn_5, #cancel{
+#btn_3,#btn_5, #cancelBtn{
     margin-left:5vh;
 }
 footer{
@@ -94,6 +95,7 @@ input, #debitAccount,#depositAccount{
 }
 #accountList{
     background-color: burlywood;
+    box-shadow:-3px 0 4px inset;
 
 }
 h3{
@@ -123,4 +125,8 @@ pre{
 }
 pre>a{
     color:aqua;
+}
+.gg{
+    width:100vw;
+    height:20vh;
 }

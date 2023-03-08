@@ -56,7 +56,7 @@ class BankAccount {
     static accountListTextArea = document.getElementById("accountList");
    
     static cancel(){
-      document.getElementById("accountList").value = "";
+      // document.getElementById("accountList").value = "";
       Bank.accountInfoList =[];
       Bank.saveData();
       Bank.renderAccountList();
@@ -92,14 +92,13 @@ class BankAccount {
 
     });
      document.getElementById("newDepositAccount").value="";
-      document.getElementById("accountName").innerHTML = "";
-      document.getElementById("depositAmount").innerHTML= "";
+      document.getElementById("accountName").value= "";
+      document.getElementById("depositAmount").value= "";
     }
-     
     
 }
 var createAccountBtn = document.getElementById("btn_1");
-// var cancel = document.getElementById("cancel");
  createAccountBtn.addEventListener('click', Bank.createAccount);
-//  cancel.addEventListener('click',Bank.cancel);
+ document.getElementById("cancelBtn").addEventListener('click',cancel);
  Bank.renderAccountList();
+ 
