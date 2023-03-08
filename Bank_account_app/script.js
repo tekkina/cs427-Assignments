@@ -99,6 +99,6 @@ class BankAccount {
 }
 var createAccountBtn = document.getElementById("btn_1");
  createAccountBtn.addEventListener('click', Bank.createAccount);
- document.getElementById("cancelBtn").addEventListener('click',cancel);
+ document.getElementById("cancelBtn").addEventListener('click',Bank.cancel);
  Bank.renderAccountList();
  
