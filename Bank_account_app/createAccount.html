@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Bank Accounts</title>
+  <link rel="stylesheet" href ="./style.css" type="text/css">
+  <link rel ="stylesheet" href="./createAccount.css" type="text/css">
+</head>
+<body>
+<header>
+<div> Welcome to Tekkina City Bank</div>
+<div>
+    <button  type = "submit" id ="linkedBtn"><a href ="./index.html">Home Page</a></button>
+    <button type="submit" id="linkedBtn"><a href="./deposit.html">Make Deposit</a></button>
+    <button type="submit" id="linkedBtn"><a href="./withdraw.html">Make Withdrawal</a></button>
+</div>
+</header>
+
+<main>
+  <div>
+    <label class="labelblock">Account Holder Name: </label>
+    <input type="text" id="accountName" required>
+  </div>
+  <div>
+    <label class="labelblock">Account Number: </label>
+    <input type="number" id="newDepositAccount" required>
+  </div>
+  <div>
+    <label class="labelblock">Initial Deposit Amount: </label>
+    <input type="number" id="depositAmount" required>
+  </div>
+  <div>
+    <button type = "submit" id ="btn_1" onclick="createAccount()">Create New Account</button>
+    <button type ="submit" id ="cancelBtn" onclick ="cancel()">Cancel All</button> 
+  </div>
+  <div class="textareagapper"></div>
+  <div>
+    
+    <fieldset><legend>Customer Account List</legend>
+    <textarea id="accountList" rows="20" cols="160" readonly></textarea>
+</fieldset>
+  </div>
+<div class="gg"></div>
+</main>
+
+<footer>
+<div>
+<div class="beginfooter">
+<pre>
+head office address:
+1000 N 4th street, fairfield, Iowa
+<a href ="tel:+16141234543">Call us: (+1)614-123-4543</a>
+<a href ="mailto:tteklehaimanot@miu.edu">Email us: tteklehaimanot@miu.edu</a>
+</pre>
+</div>
+<div class="midfooter">
+<pre>
+Working hours:
+On call, customer service 24/7
+in person monday -friday 08:30 am - 05:30 pm
+</pre>
+</div>
+<div class="endfooter">
+<pre>
+March, 2023
+Myestro City Bank,Fairfield
+@copywrite 2022/myestrobank/2881
+</pre>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

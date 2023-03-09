@@ -26,26 +26,6 @@ header a{
     text-decoration:none;
     color:black;
 }
-p{ margin-top:4vh;
-    color:rgb(92, 7, 142);
-    font-weight: bold;
-    font-size:2vw;
-    text-align:center;
-}
-.customerService{
-    position: absolute;
-    margin-left:0;
-    bottom:10vh;
-    width:60vw;
-    height:73vh;
-}
-.pennyStack{
-    position: absolute;
-    margin-left:60vw;
-    bottom:10vh;
-    width:40vw;
-    height:50vh;
-}
 .moto{
     position: absolute;
     margin-left:65vw;
@@ -76,7 +56,7 @@ hr{
     
 }
 
-#btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#cancelBtn, #linkedBtn{
+#btn_2,#btn_3,#btn_4,#btn_5,#cancelBtn, #linkedBtn{
     font-size:3vh;
     background-color: cadetblue;
     margin-top:4vh;
@@ -88,21 +68,18 @@ hr{
 header a:active{
     color:white;
 }
-#btn_1:hover,#btn_2:hover,#btn_3:hover,#btn_4:hover,#btn_5:hover,#cancelBtn:hover{
+#btn_2:hover,#btn_3:hover,#btn_4:hover,#btn_5:hover,#cancelBtn:hover{
     transform:scale(1.1);
     background-color: chartreuse;
     border-color:black;
 }
-#btn_1:active,#btn_2:active,#btn_3:active,#btn_4:active,#btn_5:active,#cancelBtn:active{
+#btn_2:active,#btn_3:active,#btn_4:active,#btn_5:active,#cancelBtn:active{
     transform:scale(0.85);
     background-color: black;
     color:white;
 }
 #btn_3,#btn_5, #cancelBtn{
     margin-left:5vh;
-}
-.buttonAlign{
-
 }
 footer{
     position:fixed;

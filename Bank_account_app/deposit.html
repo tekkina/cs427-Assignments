@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Bank Accounts</title>
+  <link rel="stylesheet" href ="./style.css" type="text/css">
+  <link rel ="stylesheet" href ="./createAccount.css" type="text/css">
+</head>
+<body>
+<header>
+<div> Welcome to Tekkina City Bank</div>
+<div >
+    <button type="submit" id="linkedBtn"><a href="./index.html">Home Page</a></button>
+    <button  type = "submit" id ="linkedBtn"><a href ="./createAccount.html">Create New Account</a></button>
+</div>
+</header>
+<main>
+  <div>
+       <h3>Customer Account Number</h3>
+        <input type="number" id="accountfinder" required> 
+  </div>
+
+  <section>
+  <div id="depositModal" class="modal">
+    <div class="modal-content">
+      <h2>Deposit Money</h2>
+      <div>
+        <label>Account type: </label>
+        <select id="depositAccount">
+        <option selected>Savings Account</option>
+        <option>Checkings Account</option>
+      </select>
+        <label class="labelgapper">Amount: </label>
+        <input type="number" id="deposit">
+      </div>
+      <div>
+        <button type="submit" id="btn_2" onclick="depositMoney()">Submit</button>
+        <button type="submit" id="btn_3">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <hr><hr><hr><hr><hr><hr>
+
+  <div id="debitModal" class="modal">
+    <div class="modal-content">
+      <h2>Withdraw Money</h2>
+      <div>
+
+        <label>Account type: </label>
+     <select id="withdrawalAccount">
+        <option selected>Savings Account</option>
+        <option>Checkings Account</option>
+      </select>
+
+        <label class="labelgapper">Amount: </label>
+        <input type="number" id="withdrawal" readonly>
+      </div>
+
+      <div>
+        <button type="submit" id="btn_4">Submit</button>
+        <button type="submit" id="btn_5">Cancel</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<div class="gg"></div>
+<footer>
+<div>
+<div class="beginfooter">
+<pre>
+head office address:
+1000 N 4th street, fairfield, Iowa
+<a href ="tel:+16141234543">Call us: (+1)614-123-4543</a>
+<a href ="mailto:tteklehaimanot@miu.edu">Email us: tteklehaimanot@miu.edu</a>
+</pre>
+</div>
+<div class="midfooter">
+<pre>
+Working hours:
+On call, customer service 24/7
+in person monday -friday 08:30 am - 05:30 pm
+</pre>
+</div>
+<div class="endfooter">
+<pre>
+March, 2023
+Myestro City Bank,Fairfield
+@copywrite 2022/myestrobank/2881
+</pre>
+</div>
+</div>
+</footer>
+<script src="script_1.js"></script>
+</body>
+</html>

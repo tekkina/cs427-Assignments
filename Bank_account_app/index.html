@@ -5,85 +5,23 @@
 <head>
   <title>Bank Accounts</title>
   <link rel="stylesheet" href ="./style.css" type="text/css">
+  <link rel ="stylesheet" href ="./createAccount.css" type="text/css">
 </head>
 <body>
 <header>
 <div> Welcome to Tekkina City Bank</div>
-<p>our customer satisfaction is our privillege!!</p>
+<button  type = "submit" id ="linkedBtn"><a href ="./createAccount.html">Create New Account</a></button>
+<button  type = "submit" id ="linkedBtn"><a href ="./deposit.html">Make Deposit</a></button>
+<button type="submit" id="linkedBtn"><a href="./withdraw.html">Make Withdrawal</a></button>
 </header>
-
-<main>
-  <div>
-    <label class="labelblock">Account Holder Name: </label>
-    <input type="text" id="accountName" required>
-  </div>
-  <div>
-    <label class="labelblock">Account Number: </label>
-    <input type="number" id="newDepositAccount" required>
-  </div>
-  <div>
-    <label class="labelblock">Initial Deposit Amount: </label>
-    <input type="number" id="depositAmount" required>
-  </div>
-  <div>
-    <button type = "submit" id ="btn_1" onclick="createAccount()">Create New Account</button>
-    <button type ="submit" id ="cancelBtn" onclick ="cancel()">Cancel All</button>
-  </div>
-  <div>
-    <textarea id="accountList" rows="12" cols="110" readonly></textarea>
-  </div>
-  <div>
-       <h3>Customer Account Number</h3>
-        <input type="number" id="accountfinder" required> 
-  </div>
+<div class="moto">
+  <p> Make every bit of your coin serve you!!<br>Our city bank works day and night to make your dream come true.</p>
   
-  <!-- Deposit Modal -->
-  <section>
-  <div id="depositModal" class="modal">
-    <div class="modal-content">
-      <h2>Deposit Money</h2>
-      <div>
-        <label>Account type: </label>
-        <select id="depositAccount">
-        <option selected>Savings Account</option>
-        <option>Checkings Account</option>
-      </select>
-        <label class="labelgapper">Amount: </label>
-        <input type="number" id="deposit">
-      </div>
-      <div>
-        <button type="submit" id="btn_2" onclick="deposit()">Submit</button>
-        <button type="submit" id="btn_3" onclick="abortDeposit()">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-  <hr><hr><hr><hr><hr><hr>
-
-  <!-- Debit Modal -->
-  <div id="debitModal" class="modal">
-    <div class="modal-content">
-      <h2>Withdraw Money</h2>
-      <div>
-
-        <label>Account type: </label>
-     <select id="withdrawalAccount">
-        <option selected>Savings Account</option>
-        <option>Checkings Account</option>
-      </select>
-
-        <label class="labelgapper">Amount: </label>
-        <input type="number" id="withdrawal" required>
-      </div>
-
-      <div>
-        <button type="submit" id="btn_4" onclick="withdraw()">Submit</button>
-        <button type="submit" id="btn_5" onclick="abortWithdawal()">Cancel</button>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+</div>
+<div class ="img">
+  <img class="customerService" src="./images/customer.webp" alt ="customer service">
+<img class="pennyStack" src="./images/penny.jpeg" alt ="penny stack">
+</div>
 <div class="gg"></div>
 <footer>
 <div>
@@ -111,6 +49,6 @@ Myestro City Bank,Fairfield
 </div>
 </div>
 </footer>
-<script src="script.js"></script>
+<script src="script_1.js"></script>
 </body>
 </html>
