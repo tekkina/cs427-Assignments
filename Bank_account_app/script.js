@@ -49,9 +49,6 @@ class BankAccount {
     }
     static accessCustomerList =()=> JSON.parse(localStorage.getItem('myObject'));
     static initialDeposit = document.getElementById("initialDeposit");
-    // static deposit = document.getElementById("deposit");
-    // static withdrawal = document.getElementById("withdrawal");
-    // static accountFinder = document.getElementById("accountfinder");
     static newAccountNumber = document.getElementById("newDepositAccount");
     static accountName = document.getElementById("accountName");
     static accountListTextArea = document.getElementById("accountList");

@@ -61,11 +61,6 @@ class BankAccount {
        Bank.withdrawal.value =""; 
      }
 
-    static cancel(){
-      Bank.accountInfoList =[];
-      Bank.saveData();
-      Bank.renderAccountList();
-    }
   static invalidEntry(){
     if(parseFloat(Bank.deposit.value)<= 0 || parseFloat(Bank.withdrawal.value)<=0){
       alert(`invalid entry, you have entered to deposit an ivalid amount of dollars \ni.e negative or zero`);
@@ -90,6 +85,7 @@ class BankAccount {
     Bank.accountInfoList[scannedAccount[0]._index]._balance += deposit; 
     Bank.saveData();
      alert("deposit successfully completed.");
+     Bank.inputClear();
       return;
       }
       else if(scannedAccount.length >1){
@@ -124,6 +120,7 @@ class BankAccount {
      Bank.accountInfoList[scannedAccount[0]._index]._balance -= withdraw; 
      Bank.saveData();
      alert("withdrawal successfully completed.");
+     Bank.inputClear(); 
       return;
       }
       else if(scannedAccount.length >1){
