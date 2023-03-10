@@ -33,7 +33,6 @@ main{
     margin-right:auto;
     margin-top:2vh;
     line-height: 4vh;
-   
 }
 
 header a:active{
@@ -41,6 +40,7 @@ header a:active{
 }
 section{
     display:inline-flex;
+    width:100vw;
     height:28vh;
     background-color:rgb(250, 212, 212);
 }

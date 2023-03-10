@@ -21,3 +21,9 @@ input, #withdrawalAccount{
     background-color: antiquewhite;
     font-size:2.5vh;
 }
+.photodisplay{
+    background-image: url("./images/finance-banking-concept-background-business-70538885.jpeg");
+    opacity:60%;
+    height:40vh;
+    background-size: 50%;
+}

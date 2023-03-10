@@ -16,14 +16,15 @@
     position: absolute;
     margin-left:65vw;
     margin-right:10vw;
-    width:30vw;
-    margin-top:10vh;
-    line-height: 3vh; 
+    width:35vw;
+    margin-top:5vh;
+    line-height: 4vh; 
    
 }
-p{ margin-top:4vh;
+p{ 
     color:rgb(92, 7, 142);
     font-weight: bold;
     font-size:2vw;
     text-align:center;
+    
 }
