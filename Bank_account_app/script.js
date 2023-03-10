@@ -48,21 +48,19 @@ class BankAccount {
       localStorage.setItem('myObject',JSON.stringify(Bank.accountInfoList));
     }
     static accessCustomerList =()=> JSON.parse(localStorage.getItem('myObject'));
-    static accountListTextArea = document.getElementById("accountList");
-    static initialDeposit = document.getElementById("depositAmount");
-    static deposit = document.getElementById("deposit");
-    static withdrawal = document.getElementById("withdrawal");
-    static accountFinder = document.getElementById("accountfinder");
+    static initialDeposit = document.getElementById("initialDeposit");
+    // static deposit = document.getElementById("deposit");
+    // static withdrawal = document.getElementById("withdrawal");
+    // static accountFinder = document.getElementById("accountfinder");
     static newAccountNumber = document.getElementById("newDepositAccount");
     static accountName = document.getElementById("accountName");
+    static accountListTextArea = document.getElementById("accountList");
 
     static inputClear(){
-       Bank.newAccountNumber.value="";
-       Bank.accountName.value= "";
-       Bank.deposit.value= "";
-       Bank.accountFinder.value="";
-       Bank.withdrawal.value =""; 
-       Bank.initialDeposit.value="";
+      Bank.initialDeposit.value ="";
+       Bank.newAccountNumber.value ="";
+       Bank.accountName.value = "";
+  
      }
 
     static cancel(){
@@ -88,10 +86,10 @@ class BankAccount {
       }
 
      else if (Bank.accountName.value.trim()!=="" && Bank.initialDeposit.value >= 100 ) {
-        const account = new BankAccount(Bank.accountName.value, parseFloat(Bank.initialDeposit.value),
-        Bank.newAccountNumber.value);
+        const account = new BankAccount(Bank.accountName.value, parseFloat(Bank.initialDeposit.value),Bank.newAccountNumber.value);
+        Bank.renderAccountList();
         account._index = Bank.accessCustomerList().length;
-        Bank.accountInfoList =Bank.accessCustomerList();
+        Bank.accountInfoList = Bank.accessCustomerList();
         Bank.accountInfoList.push(account);
         Bank.saveData();
         Bank.renderAccountList();

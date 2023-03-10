@@ -51,17 +51,11 @@ class BankAccount {
       localStorage.setItem('myObject',JSON.stringify(Bank.accountInfoList));
     }
     static accessCustomerList =()=> JSON.parse(localStorage.getItem('myObject'));
-    static accountListTextArea = document.getElementById("accountList");
-    static initialDeposit = document.getElementById("depositAmount");
     static deposit = document.getElementById("deposit");
     static withdrawal = document.getElementById("withdrawal");
     static accountFinder = document.getElementById("accountfinder");
-    static newAccountNumber = document.getElementById("newDepositAccount");
-    static accountName = document.getElementById("accountName");
 
     static inputClear(){
-       Bank.newAccountNumber.value="";
-       Bank.accountName.value= "";
        Bank.deposit.value= "";
        Bank.accountFinder.value="";
        Bank.withdrawal.value =""; 
