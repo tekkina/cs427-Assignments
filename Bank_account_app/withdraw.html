@@ -3,9 +3,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-  <title>Bank Accounts</title>
-  <link rel="stylesheet" href ="./style.css" type="text/css">
-  <link rel ="stylesheet" href ="./createAccount.css" type="text/css">
+  <title>Bank Accounts</title> 
+  <link rel="stylesheet" href ="./withdraw.css" type="text/css">
+  <link rel="stylesheet" href = "./common.css" type="text/css">
 </head>
 <body>
 <header>
@@ -17,14 +17,14 @@
 </header>
 <main>
   <div>
-       <h3>Customer Account Number</h3>
+       <h2>Customer Account Number</h2>
         <input type="number" id="accountfinder" required> 
   </div>
 
   <section>
   <div id="depositModal" class="modal">
     <div class="modal-content">
-      <h2>Deposit Money</h2>
+      <h1>Deposit Money</h1>
       <div>
         <label>Account type: </label>
         <select id="depositAccount">
@@ -32,7 +32,7 @@
         <option>Checkings Account</option>
       </select>
         <label class="labelgapper">Amount: </label>
-        <input type="number" id="deposit" readonly>
+        <input type="number" id="deposit"readonly>
       </div>
       <div>
         <button type="submit" id="btn_2">Submit</button>
@@ -43,9 +43,9 @@
 
   <hr><hr><hr><hr><hr><hr>
 
-  <div id="debitModal" class="modal">
+  <div id="withdrawalModal" class="modal">
     <div class="modal-content">
-      <h2>Withdraw Money</h2>
+      <h1>Withdraw Money</h1>
       <div>
 
         <label>Account type: </label>
@@ -94,5 +94,10 @@ Myestro City Bank,Fairfield
 </div>
 </footer>
 <script src="script_1.js"></script>
+<script>document.getElementById("btn_2").disabled = true;
+  document.getElementById("btn_3").disabled = true;
+  document.getElementById("btn_2").style.pointerEvents = "none";
+  document.getElementById("btn_3").style.pointerEvents = "none";
+</script>
 </body>
 </html>

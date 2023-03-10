@@ -62,6 +62,7 @@ class BankAccount {
        Bank.deposit.value= "";
        Bank.accountFinder.value="";
        Bank.withdrawal.value =""; 
+       Bank.initialDeposit.value="";
      }
 
     static cancel(){
@@ -107,7 +108,6 @@ class BankAccount {
       Bank.accountInfoList.forEach((item)=> {
       Bank.accountListTextArea.innerHTML += `${item._index +1}.  account holder name: ${item._name}, account number: ${item._accountNumber},account Balance = ${item._balance} \n`
     });
-    alert("rendering");
    Bank.inputClear();
   }
 
@@ -115,4 +115,6 @@ class BankAccount {
 
 const createAccountBtn = document.getElementById("btn_1");
 createAccountBtn.addEventListener('click', Bank.createAccount);
+const cancelBtn = document.getElementById("cancelBtn");
+cancelBtn.addEventListener('click', Bank.cancel);
 Bank.renderAccountList();

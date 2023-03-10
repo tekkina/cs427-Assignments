@@ -1,0 +1,29 @@
+.customerService{
+    position: absolute;
+    margin-left:0;
+    bottom:10vh;
+    width:60vw;
+    height:73vh;
+}
+.pennyStack{
+    position: absolute;
+    margin-left:60vw;
+    bottom:10vh;
+    width:40vw;
+    height:50vh;
+}
+.moto{
+    position: absolute;
+    margin-left:65vw;
+    margin-right:10vw;
+    width:30vw;
+    margin-top:10vh;
+    line-height: 3vh; 
+   
+}
+p{ margin-top:4vh;
+    color:rgb(92, 7, 142);
+    font-weight: bold;
+    font-size:2vw;
+    text-align:center;
+}
