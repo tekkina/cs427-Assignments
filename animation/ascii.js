@@ -686,8 +686,20 @@ var start = function () {
     nextFrame(desiredDisplay);
   },speed);
   $("#btnStart").prop('disabled',true);
+  $("#playlist").prop("disabled",true);
   $("#btnStop").prop('disabled', false);
-  }
+  $("#turbo").change(function() {
+    if($(this).is(":checked")) {
+      speed = 50; 
+    } else {
+      speed = 250;
+    }
+    clearInterval(intervalId);
+    intervalId = setInterval(() => {
+      nextFrame(desiredDisplay);
+    }, speed);
+  });
+}
   const stop =()=>{
     $("#textarea").val(desiredDisplay.join("===== "));
     clearInterval(intervalId);
@@ -725,21 +737,21 @@ $("#playlist").change(selectedFrame)
 $("#font-sizes").change(textResize)
 $("#btnStart").on('click',start)
 $("#btnStop").on('click',stop)
-$("label").is(":clicked").
-$("#turbo").on("change",()=>{
-      if($(this).is(": checked"))
-      speed=50;
-      else
-      speed=1000;
-      clearInterval(intervalId);
-    intervalId = setInterval(() => {
-      nextFrame(desiredDisplay);
-    }, speed);
-  });
+// $("label").is(":clicked").
+// $("#turbo").on("change",()=>{
+//       if($(this).is(": checked"))
+//       speed=50;
+//       else
+//       speed=1000;
+//       clearInterval(intervalId);
+//     intervalId = setInterval(() => {
+//       nextFrame(desiredDisplay);
+//     }, speed);
+//   });
   $('label[for="turbo"]').click(function() {
     $('#checkbox').trigger('click');
   });
-    })
+    });
     
 
 
