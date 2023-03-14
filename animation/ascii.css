@@ -45,71 +45,63 @@ background-color: aqua;
     text-align: center;
 }
 
-.validator{
-    position:absolute;
-    bottom:5vh;
-    right:5vh;
-}
-
 label{
     margin-bottom:2vh;
     margin-right:1vh;
     font-size:2vh;
     margin-top:1vh;
     }
-    #turbo{
-        margin-bottom:1.5vh;
-        margin-right:1vh;
-        font-size:2vh;
-        width:2vh;
-        }
-        img{
-            width:10vw;
-            height:5vh;
-        }
-        .cssvalidator{
-            position:fixed;
-            bottom:10vh;
-            left:90vw;
-            width:10vw;
-            height:4vh;
-            opacity:50%;
-                }
-                .htmlvalidator{
-                    position:fixed;
-                    bottom:15vh;
-                    left:90vw;
-                    width:10vw;
-                    height:7vh;
-                    padding-bottom:1vh;
-                    opacity: 50%;
-                        }
-                        footer{
-                            position:absolute;
-                            bottom:0;
-                            background-color: khaki;
-                            font-size:small;
-                            width:100vw;
-                            height:4vw;
-                        }
-                        footer>div{
-                            display:inline-flex;
-                            width:100%;
+#turbo{
+margin-bottom:1.5vh;
+margin-right:1vh;
+font-size:2vh;
+width:2vh;
+}
+img{
+width:10vw;
+height:5vh;
+}
+.css{
+bottom:10vh;
+    }
+.validator{
+    position:fixed;
+    padding-bottom:1vh;
+    left:90vw;
+    opacity: 50%;
+    }
+.html{
+    bottom:15vh;
+    }
+.js{
+    bottom:5vh;
+     }
+footer{
+position:absolute;
+bottom:0;
+background-color: khaki;
+font-size:small;
+width:100vw;
+height:4vw;
+}
+footer>div{
+    display:inline-flex;
+    width:100%;
                         
-                        }
-                        .beginfooter{
-                            flex:3;
-                            text-align: center;
-                            padding-top:1vw;
+}
+.beginfooter{
+    flex:3;
+    text-align: center;
+    padding-top:1vw;
                         
-                        }
-                        .midfooter{
-                        flex:7;
-                        text-align: center;
-                        padding-top:1vw;
-                        }
-                        .endfooter{
-                            flex:2;
-                            text-align: center;
-                            padding-top:1vw;
-                        }
+    }
+.midfooter{
+    flex:7;
+    text-align: center;
+    padding-top:1vw;
+    }
+.endfooter{
+    flex:2;
+    text-align: center;
+    padding-top:1vw;
+    }
