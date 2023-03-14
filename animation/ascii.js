@@ -1,46 +1,43 @@
-
 var BLANK = "";
-
-
-var CUSTOM = "\n         O \n"+ 
-"         |\n"+
-"       >---< \n" +
-"         | \n"+
-"        / \\ \n"+
-"        ___                 ___ \n"+
-"       (o o)               (o o) \n"+
-"      (  V  )    my owl   (  V  ) \n" +
-"      --m--m----------------m--m-- \n" +
-"        /|\\                 /|\\ \n===== \n"+
-"         O\n"+
-"         | \n"+
-"       >---< \n" +
-"         | \n"+
-"        / \\ \n"+
-"        ___                 ___ \n"+
-"       (o o)               (o o) \n"+
-"      (  V  )    my owl   (  V  ) \n" +
-"      --m--m----------------m--m-- \n" +
-"        /|\\                 /|\\ \n===== \n"+
-"         O \n"+ 
-"         | \n"+
-"       >---< \n" +
-"         | \n"+
-"        / \\ \n"+
-"        ___                 ___ \n"+
-"       (o o)               (o o) \n"+
-"      (  V  )    my owl   (  V  ) \n" +
-"      --m--m----------------m--m-- \n" +
-"        /|\\                 /|\\ \n===== \n" +
-"\n                                  hello welcome to our animation demo \n===== \n"+
-"\n                                  hello welcome to our animation demo \n===== \n"+
-"\n                                  hello welcome to our animation demo \n===== \n"+
-"\n\n\n                    today we will see \n===== \n"+
-"\n\n\n                    today we will see \n===== \n"+
-"\n\n\n                    today we will see \n===== \n"+
-"\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n"+
-"\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n"+
-"\n\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n"// you could change the value of this variable in your code
+var CUSTOM = "\n         O \n";
+// "         |\n" +
+// "       >---< \n" +
+// "         | \n" +
+// "        / \\ \n" +
+// "        ___                 ___ \n" +
+// "       (o o)               (o o) \n" +
+// "      (  V  )    my owl   (  V  ) \n" +
+// "      --m--m----------------m--m-- \n" +
+// "        /|\\                 /|\\ \n===== \n" +
+// "         O \n" +
+// "         | \n" +
+// "       >---< \n" +
+// "         | \n" +
+// "        / \\ \n" +
+// "        ___                 ___ \n" +
+// "       (o o)               (o o) \n" +
+// "      (  V  )    my owl   (  V  ) \n" +
+// "      --m--m----------------m--m-- \n" +
+// "        /|\\                 /|\\ \n===== \n" +
+// "         O \n" + 
+// "         | \n" +
+// "       >---< \n" +
+// "         | \n" +
+// "        / \\ \n" +
+// "        ___                 ___ \n" +
+// "       (o o)               (o o) \n" +
+// "      (  V  )    my owl   (  V  ) \n" +
+// "      --m--m----------------m--m-- \n" +
+// "        /|\\                 /|\\ \n===== \n" +
+// "\n                                  hello welcome to our animation demo \n===== \n" +
+// "\n                                  hello welcome to our animation demo \n===== \n" +
+// "\n                                  hello welcome to our animation demo \n===== \n" +
+// "\n\n\n                    today we will see \n===== \n" +
+// "\n\n\n                    today we will see \n===== \n" +
+// "\n\n\n                    today we will see \n===== \n" +
+// "\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n" +
+// "\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n" +
+// "\n\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n";// you could change the value of this variable in your code
 
 var EXERCISE = "  o\n" +
     " /#\\\n" +
@@ -155,7 +152,6 @@ var BIKE = "\n" +
     "                      (_)\n" +
     "                      _|/\'    \\\\/\n" +
     "                  .  (_)\'     _\\\\__   o\n";
-
 var DIVE = "  o\n" +
     " /|\\\n" +
     ",/ \\\n" +
@@ -662,12 +658,12 @@ var DIVE = "  o\n" +
 
 
 var ANIMATIONS = [];
-ANIMATIONS["Blank"] = ANIMATIONS["blank"] = ANIMATIONS["BLANK"] = BLANK;
-ANIMATIONS["Custom"] = ANIMATIONS["custom"] = ANIMATIONS["CUSTOM"] = CUSTOM;   // you could change the value of this in your code
-ANIMATIONS["Exercise"] = ANIMATIONS["exercise"] = ANIMATIONS["EXERCISE"] = EXERCISE;
-ANIMATIONS["Juggler"] = ANIMATIONS["juggler"] = ANIMATIONS["JUGGLER"] = JUGGLER;
-ANIMATIONS["Bike"] = ANIMATIONS["bike"] = ANIMATIONS["BIKE"] = BIKE;//
-ANIMATIONS["Dive"] = ANIMATIONS["dive"] = ANIMATIONS["DIVE"] = DIVE;//
+ANIMATIONS.Blank = ANIMATIONS.blank = ANIMATIONS.BLANK = BLANK;
+ANIMATIONS.Custom = ANIMATIONS.custom = ANIMATIONS.CUSTOM = CUSTOM;   // you could change the value of this in your code
+ANIMATIONS.Exercise = ANIMATIONS.exercise= ANIMATIONS.EXERCISE = EXERCISE;
+ANIMATIONS.Juggler = ANIMATIONS.juggler = ANIMATIONS.JUGGLER = JUGGLER;
+ANIMATIONS.Bike = ANIMATIONS.bike= ANIMATIONS.BIKE = BIKE;//
+ANIMATIONS.Dive = ANIMATIONS.dive = ANIMATIONS.DIVE = DIVE;//
 ANIMATIONS.push(BLANK);
 ANIMATIONS.push(CUSTOM);
 ANIMATIONS.push(JUGGLER);
@@ -675,16 +671,18 @@ ANIMATIONS.push(EXERCISE);
 ANIMATIONS.push(DIVE);
 ANIMATIONS.push(BIKE);
 
-console.log(ANIMATIONS.length);
-console.log(ANIMATIONS["exercise"]);
-var intervalId=null;
-var desiredDisplay=[];
+var selectedFrameArray = function () {
+  var sentence = $("#textarea").val();
+        return sentence.split("====="); // Return the array instead of the original sentence
+    }
+    let intervalId = null;
+var desiredDisplay = [];
 var speed;
 
-const start =()=>{
-  speed =1000;
-  desiredDisplay = selectedFrameArray();
-  intervalId = setInterval(() => {
+var start = function () {
+  var speed = 1000;
+        desiredDisplay = selectedFrameArray();
+  var intervalId = setInterval(() => {
     nextFrame(desiredDisplay);
   },speed);
   $("#btnStart").prop('disabled',true);
@@ -711,15 +709,6 @@ function textResize(){
 function speedUpAnimation(){
   start(50);
 }
-var selectedFrameArray = function() {
-  var sentence = $("#textarea").val();
-  var textArray = sentence.split("=====");
-  return textArray; // Return the array instead of the original sentence
-}
-
-console.log("this is the arrray i want" + selectedFrameArray().length,selectedFrameArray());
-
-
 var count = -1;
 
 function nextFrame(array) {
@@ -728,34 +717,16 @@ function nextFrame(array) {
   
 }
 
-console.log(count)
-
-
-$(document).ready(function(){
-
-  // $('#myCheckbox').on('click', function() {
-  //   $('#myButton').prop('disabled', !$(this).is(':checked'));
-  // });
-
-// $("#textarea").val(selectedFrame);  
+$(document).ready(function(){  
 selectedFrame();
-
-
 $("#btnStop").prop("disabled",true);
-
-
 $("#playlist").on('change',stop)
-  $("#playlist").change(selectedFrame)
-
-  
-  $("#font-sizes").change(textResize)
-
-  
-    $("#btnStart").on('click',start)
-  
-    $("#btnStop").on('click',stop)
-    $("label").is(":clicked").
-    $("#turbo").on("change",()=>{
+$("#playlist").change(selectedFrame)
+$("#font-sizes").change(textResize)
+$("#btnStart").on('click',start)
+$("#btnStop").on('click',stop)
+$("label").is(":clicked").
+$("#turbo").on("change",()=>{
       if($(this).is(": checked"))
       speed=50;
       else
@@ -765,10 +736,11 @@ $("#playlist").on('change',stop)
       nextFrame(desiredDisplay);
     }, speed);
   });
+  $('label[for="turbo"]').click(function() {
+    $('#checkbox').trigger('click');
+  });
     })
-    $('label[for="turbo"]').click(function() {
-      $('#checkbox').trigger('click');
-    });
+    
 
 
 
