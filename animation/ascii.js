@@ -1,46 +1,46 @@
 
 var BLANK = "";
 
-var CUSTOM = 
-"\n         O\n"+ 
+
+var CUSTOM = "\n         O \n"+ 
 "         |\n"+
-"       >---<\n" +
-"         |\n"+
-"        / \\\n"+
+"       >---< \n" +
+"         | \n"+
+"        / \\ \n"+
 "        ___                 ___ \n"+
-"       (o o)               (o o)\n"+
-"      (  V  )    my owl   (  V  )\n" +
-"      --m--m----------------m--m--\n" +
-"        /|\\                 /|\\\n=====\n"+
+"       (o o)               (o o) \n"+
+"      (  V  )    my owl   (  V  ) \n" +
+"      --m--m----------------m--m-- \n" +
+"        /|\\                 /|\\ \n===== \n"+
 "         O\n"+
-"         |\n"+
-"       >---<\n" +
-"         |\n"+
-"        / \\\n"+
+"         | \n"+
+"       >---< \n" +
+"         | \n"+
+"        / \\ \n"+
 "        ___                 ___ \n"+
-"       (o o)               (o o)\n"+
-"      (  V  )    my owl   (  V  )\n" +
-"      --m--m----------------m--m--\n" +
-"        /|\\                 /|\\\n=====\n"+
-"         O\n"+ 
-"         |\n"+
-"       >---<\n" +
-"         |\n"+
-"        / \\\n"+
+"       (o o)               (o o) \n"+
+"      (  V  )    my owl   (  V  ) \n" +
+"      --m--m----------------m--m-- \n" +
+"        /|\\                 /|\\ \n===== \n"+
+"         O \n"+ 
+"         | \n"+
+"       >---< \n" +
+"         | \n"+
+"        / \\ \n"+
 "        ___                 ___ \n"+
-"       (o o)               (o o)\n"+
-"      (  V  )    my owl   (  V  )\n" +
-"      --m--m----------------m--m--\n" +
-"        /|\\                 /|\\\n=====\n" +
-"\n                                  hello welcome to our animation demo \n=====\n"+
-"\n                                  hello welcome to our animation demo \n=====\n"+
-"\n                                  hello welcome to our animation demo \n=====\n"+
-"\n\n\n                    today we will see \n=====\n"+
-"\n\n\n                    today we will see \n=====\n"+
-"\n\n\n                    today we will see \n=====\n"+
-"\n\n\n\n\n\n\n\n        ascii animation which is awesome \n=====\n"+
-"\n\n\n\n\n\n\n\n        ascii animation which is awesome \n=====\n"+
-"\n\n\n\n\n\n\n\n\n        ascii animation which is awesome \n=====\n"// you could change the value of this variable in your code
+"       (o o)               (o o) \n"+
+"      (  V  )    my owl   (  V  ) \n" +
+"      --m--m----------------m--m-- \n" +
+"        /|\\                 /|\\ \n===== \n" +
+"\n                                  hello welcome to our animation demo \n===== \n"+
+"\n                                  hello welcome to our animation demo \n===== \n"+
+"\n                                  hello welcome to our animation demo \n===== \n"+
+"\n\n\n                    today we will see \n===== \n"+
+"\n\n\n                    today we will see \n===== \n"+
+"\n\n\n                    today we will see \n===== \n"+
+"\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n"+
+"\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n"+
+"\n\n\n\n\n\n\n\n\n        ascii animation which is awesome \n===== \n"// you could change the value of this variable in your code
 
 var EXERCISE = "  o\n" +
     " /#\\\n" +
