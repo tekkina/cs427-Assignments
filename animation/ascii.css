@@ -1,0 +1,115 @@
+*{
+box-sizing: border-box;
+margin:0;
+padding:0;
+}
+html,body{
+    background-color: #CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight:bold;
+}
+.heading{
+    margin-top:2vh;
+    font-size: 32pt;
+    text-align: center;
+   
+}
+.textarea_center{
+    text-align:center;
+}
+textarea{
+    width:90%;
+    height:400px;
+    margin-bottom:2vh;
+    font-size:12pt;
+    font-family:monospace;
+    font-weight:bold;
+}
+
+fieldset{
+    display:inline-flex;
+    border: 5px solid black;
+}
+.control,button{
+ font-size:2vh;
+ padding:1vh;
+
+}
+
+#font-sizes,#playlist,#turbo{
+margin:1vh;
+background-color: aqua;
+}
+.tabs{
+    text-align: center;
+}
+
+.validator{
+    position:absolute;
+    bottom:5vh;
+    right:5vh;
+}
+
+label{
+    margin-bottom:2vh;
+    margin-right:1vh;
+    font-size:2vh;
+    margin-top:1vh;
+    }
+    #turbo{
+        margin-bottom:1.5vh;
+        margin-right:1vh;
+        font-size:2vh;
+        width:2vh;
+        }
+        img{
+            width:10vw;
+            height:5vh;
+        }
+        .cssvalidator{
+            position:fixed;
+            bottom:10vh;
+            left:90vw;
+            width:10vw;
+            height:4vh;
+            opacity:50%;
+                }
+                .htmlvalidator{
+                    position:fixed;
+                    bottom:15vh;
+                    left:90vw;
+                    width:10vw;
+                    height:7vh;
+                    padding-bottom:1vh;
+                    opacity: 50%;
+                        }
+                        footer{
+                            position:absolute;
+                            bottom:0;
+                            background-color: khaki;
+                            font-size:small;
+                            width:100vw;
+                            height:4vw;
+                        }
+                        footer>div{
+                            display:inline-flex;
+                            width:100%;
+                        
+                        }
+                        .beginfooter{
+                            flex:3;
+                            text-align: center;
+                            padding-top:1vw;
+                        
+                        }
+                        .midfooter{
+                        flex:7;
+                        text-align: center;
+                        padding-top:1vw;
+                        }
+                        .endfooter{
+                            flex:2;
+                            text-align: center;
+                            padding-top:1vw;
+                        }

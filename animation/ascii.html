@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="ascii.css" rel="stylesheet" type="text/css">
+   
+</head>
+<body>
+<heaader>
+<div class="heading">ASCII Animation Viewer</div>
+</heaader>
+
+<div class="textarea_center">
+    <textarea id="textarea" rows="20" cols="80"></textarea>
+</div>
+    <div class="tabs">
+        <fieldset>
+            <legend>Play Controls:</legend>
+            <div  class="control">
+                <button id="btnStart">start </button>
+                <button id="btnStop">stop</button>
+            </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="playlist" class="control">
+                    <option value="Bike">Bike</option>
+                    <option value="Exercise">Exercise</option>
+                    <option value="Juggler" selected>Jugglers</option>
+                    <option value="Dive" >Dive</option>
+                    <option value="Blank">Blank</option>
+                    <option value="Custom">Custom</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Size:</legend>
+                <select id="font-sizes" class="control">
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+                    <option value="12pt" selected>Medium</option>
+                    <option value="16pt">Large</option>
+                    <option value="24pt">Extra Large</option>
+                    <option value="32pt">XXL</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+            <legend>Speed:</legend>
+            <input type="checkbox" id="turbo">
+            <label id="label" for="turbo">Turbo</label>
+        </fieldset>
+    </div>
+
+        <div>
+            <a href="https://validator.w3.org/check?uri=https://tekkina.github.io/cs427-Assignments/animation/ascii.html" style="text-decoration:none;">
+            <img class="htmlvalidator" src="./images/w3c-html.png" alt= "html validator"></a> 
+        
+             <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://tekkina.github.io/cs427-Assignments/animation/ascii.css" style="text-decoration:none;">
+                <img class="cssvalidator" src="./images/w3c-css.png" alt="Valid CSS!"></a>
+                <a href="script.js">
+                    <img src="./images/js.png" alt="script">
+                </a>
+        </div> 
+        <footer>
+            <div>
+            <div class="beginfooter">
+           <p> prepared by: Tekeste T.</p>
+            <p>Course: WAP(CS472)</p>
+            </div>
+             <div class="midfooter">
+           <p>Ascii Animation</p>
+            <p>refer @ textpaint.net</p>
+             </div>
+            <div class="endfooter">
+            <p>March, 2023</p>
+            <p>MIU,Fairfield</p>
+           </div>
+            </div>
+        </footer>
+    <script src="./ascii.js"></script>
+</body>
+</html>
