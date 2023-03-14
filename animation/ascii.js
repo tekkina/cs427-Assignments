@@ -684,30 +684,31 @@ var desiredDisplay = [];
 var speed;
 
 var start = function () {
-  var speed = 1000;
+  var speed = 250;
         desiredDisplay = selectedFrameArray();
    intervalId = setInterval(() => {
     nextFrame(desiredDisplay);
   },speed);
   $("#btnStart").prop('disabled',true);
-  $("#playlist").prop("disabled",true);
   $("#btnStop").prop('disabled', false);
+  $("#playlist").prop("disabled",true);
   $("#turbo").change(function() {
-    if($(this).is(":checked")) {
+    if($(this).is(":checked")) 
       speed = 50; 
-    } else {
+    else 
       speed = 250;
-    }
     clearInterval(intervalId);
     intervalId = setInterval(() => {
       nextFrame(desiredDisplay);
     }, speed);
+ 
   });
 }
   const stop =()=>{
-    $("#textarea").val(desiredDisplay.join("===== "));
     clearInterval(intervalId);
+    $("#textarea").val(desiredDisplay.join("===== "));
     intervalId=null;
+   $("#turbo").prop("checked",false);
     $("#btnStart").prop('disabled',false);
     $("#btnStop").prop('disabled', true);
   };
@@ -753,7 +754,7 @@ $("#btnStop").on('click',stop)
 //     }, speed);
 //   });
   $('label[for="turbo"]').click(function() {
-    $('#checkbox').trigger('click');
+    $('checkbox').trigger('click');
   });
     });
     
