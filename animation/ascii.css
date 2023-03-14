@@ -61,20 +61,23 @@ img{
 width:10vw;
 height:5vh;
 }
-.css{
-bottom:10vh;
-    }
+div>a{
+    text-decoration:none;
+}
 .validator{
     position:fixed;
     padding-bottom:1vh;
     left:90vw;
     opacity: 50%;
     }
+.css{
+bottom:10vh;
+    }
 .html{
     bottom:15vh;
     }
 .js{
-    bottom:5vh;
+    bottom:20vh;
      }
 footer{
 position:absolute;
