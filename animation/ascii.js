@@ -1,3 +1,6 @@
+// function strictMode() {
+//     'use strict';
+// }
 var BLANK = "";
 var CUSTOM = "\n         O \n";
 // "         |\n" +
@@ -672,17 +675,18 @@ ANIMATIONS.push(DIVE);
 ANIMATIONS.push(BIKE);
 
 var selectedFrameArray = function () {
-  var sentence = $("#textarea").val();
+   var sentence = document.getElementById("textarea").value;
         return sentence.split("====="); // Return the array instead of the original sentence
     }
-    let intervalId = null;
+
+var intervalId = null;
 var desiredDisplay = [];
 var speed;
 
 var start = function () {
   var speed = 1000;
         desiredDisplay = selectedFrameArray();
-  var intervalId = setInterval(() => {
+   intervalId = setInterval(() => {
     nextFrame(desiredDisplay);
   },speed);
   $("#btnStart").prop('disabled',true);
