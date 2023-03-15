@@ -1,0 +1,19 @@
+{
+  "name": "node-folder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HelloWorld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tekkina/node-projects.git"
+  },
+  "author": "Tekeste",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tekkina/node-projects/issues"
+  },
+  "homepage": "https://github.com/tekkina/node-projects#readme"
+}
