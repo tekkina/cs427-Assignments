@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Simple Adder</h1>
+    </header>
+
+    <fieldset>
+    <form action ="/calculate" method="post">
+    <div class="inline">
+    <h3>Enter two numbers</h3>
+
+<div>
+<input id="input1" type = "text" name="num1" placeholder="first input" required/><br/>
+<input id="input2" type = "text" name="num2" placeholder="second input" required/><br/>
+
+<div class="operatorselector">
+    <label for="operator">Select operator:</label>
+      <select id="operator" name="operator" required>
+        <option value="">-- Select operator --</option>
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+      </select>
+</div>
+
+<button id="btn" type="submit" >Click</button>
+</div>
+</div>
+</form>
+</fieldset>
+
+<footer>
+    <div>
+        <div class="beginfooter">
+            <p> prepared by: Tekeste T.</p>
+            <p>Course: WAP(CS472)</p>
+        </div>
+        <div class="midfooter">
+            <p>server side with express</p>
+            <p>refer @ express.js</p>
+        </div>
+        <div class="endfooter">
+            <p>March, 2023</p>
+            <p>MIU,Fairfield</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

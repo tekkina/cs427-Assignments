@@ -9,21 +9,37 @@ header{
     font-weight: large;
 }
 h3{
+    margin-top:1vh;
     margin-left:3vh;
 }
-#input1,#input2{
-    margin-top:0.5vh;
+#input1,#input2,#operatorselector{
+    margin-top:1vh;
     margin-left:3vh;
     width:10vw;
     height:3vh;
     background-color: darkgrey;
     font-size:2vh;
 }
+.operatorselector{
+    margin-top:1vh;
+    margin-left:1vh;
+    margin-right:1vh;
+    height:3vh;
+    background-color: darkgrey;
+    font-size:2vh;
+    text-align: center;
+}
+#operator{
+    margin-left:1vh;
+    margin-right:1vh;
+    height:3vh; 
+}
+
 
 #btn{
     background-color: rgb(218, 167, 100);
     font-size:2vh;
-    margin-top:0.5vh;
+    margin-top:1vh;
     padding-left:4px;
     padding-right:4px;
 
@@ -48,22 +64,55 @@ fieldset{
     margin-left:auto;
     margin-right:auto;
     margin-top:3vh;
-    width:40vw;
-    height:15vh;
+    width:50vw;
+    height:20vh;
     border:2vh solid rgb(187, 231, 231);
     border-radius: 5vh;
     text-align: center;
+    background-color: rgb(176, 162, 105);
+}
+select{
+    font-size:2vh;
 }
 .result{
     text-align: center;
     background-color: rgb(248, 211, 164);
+    margin-top:20vh;
     margin-left:auto;
     margin-right:auto;
-    margin-top:2vh;
     font-size:4vh;
     width:40vw;
+    height:10vh;
+    border-radius: 10vh;
     box-shadow: -2px 0 90px red;
 
+}
+.resultheader{
+    display:inline-flex;
+
+}
+a{
+    font-size:4vh;
+    box-shadow: -2px 0 90px white;
+    margin-top:3vh;
+    margin-bottom:2vh;
+    text-decoration: none;
+   padding-left:3vh;
+   padding-right:3vh;
+   border-radius: 5vh;;
+    text-shadow:0 0 10px red ;
+    background-color: burlywood;
+}
+a:hover{
+    transform:scale(1.2);
+    background-color: white;
+}
+a:active{
+    transform:scale(0.85);
+    background-color: cyan;
+}
+.resultgapper{
+    width:20vw;
 }
 footer{
     position:absolute;

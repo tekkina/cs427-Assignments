@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator Result</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" >
+  </head>
+  <body>
+    <header>
+      <div class="resultheader">
+        <div class="resultgapper"></div>
+    <h1>Calculator Result</h1><div class="resultgapper"></div>
+    <a href="/">Another calculation</a>
+    </div>
+  </header>
+    <p class="result"></p>
+    <footer>
+      <div>
+      <div class="beginfooter">
+     <p> prepared by: Tekeste T.</p>
+      <p>Course: WAP(CS472)</p>
+      </div>
+       <div class="midfooter">
+     <p>server side with express</p>
+      <p>refer @ express.js</p>
+       </div>
+      <div class="endfooter">
+      <p>March, 2023</p>
+      <p>MIU,Fairfield</p>
+     </div>
+      </div>
+  </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const result = params.get('result');
+    document.querySelector('.result').textContent = `The answer is: ${result}`;
+  </script>
+  </body>
+</html>
