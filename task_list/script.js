@@ -55,7 +55,7 @@ function displayTodos() {
     const delBtn = document.createElement("i");
     const doneList = document.createElement("i");
 
-    listElement.innerHTML = item.todoText;
+    listElement.innerHTML = item;
     listElement.setAttribute("data-id", item.id);
     delBtn.setAttribute("data-id", item.id);
     doneList.setAttribute("data-id",item.id);
