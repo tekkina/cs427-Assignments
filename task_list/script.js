@@ -55,7 +55,7 @@ function displayTodos() {
     const delBtn = document.createElement("i");
     const doneList = document.createElement("i");
 
-    listElement.innerHTML = item;
+    listElement.innerHTML = item.todoText;
     listElement.setAttribute("data-id", item.id);
     delBtn.setAttribute("data-id", item.id);
     doneList.setAttribute("data-id",item.id);
@@ -76,7 +76,7 @@ function displayTodos() {
       listElement.classList.add("checked");
     }
 
-    listElement.addEventListener("click", function (e) {
+    doneList.addEventListener("click", function (e) {
       const selectedId = e.target.getAttribute("data-id");
       doneTodo(selectedId);
     });
@@ -85,10 +85,11 @@ function displayTodos() {
       const delId = e.target.getAttribute("data-id");
       deleteItem(delId);
     });
-
-    todoListElement.appendChild(listElement);
+    
     listElement.appendChild(delBtn);
     listElement.appendChild(doneList);
+    todoListElement.appendChild(listElement);
+  
   });
 }
 displayTodos();
