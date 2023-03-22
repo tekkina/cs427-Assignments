@@ -16,17 +16,13 @@ document.querySelector("#myInput").addEventListener("keypress", function(e) {
 
 function addTodo() {
   const todoText = document.querySelector("#myInput").value;
-  const index;
-  if (todoText == "") {
+  if (todoText == "")
     alert("You did not enter any item");
-  } else {
+  else {
     todoList = accessListData;
-    if(todoList===null)
-      index = 1;
-    else 
-      index = todoList.length +1;
-      
-    const index = todoList.length;
+    if(todoList==null);
+    else {
+     const index = todoList.length + 1;
     saveListData();
     const todoObject = {
       id: index,
