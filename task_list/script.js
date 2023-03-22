@@ -53,8 +53,10 @@ function deleteItem(x) {
 function displayTodos() {
   todoListElement.innerHTML = "";
   document.querySelector("#myInput").value = "";
+  
   todoList = accessListData;
-    todoList.forEach((item) => {
+  
+   for(let i=0; i<todoList.length;i++){
     const listElement = document.createElement("li");
     const delBtn = document.createElement("i");
     const doneList = document.createElement("i");
