@@ -3,7 +3,7 @@ var todoList = [];
 
   function saveListData () { 
     localStorage.setItem('myObject', JSON.stringify(todoList));
-    // todoList =[]
+    todoList =[]
 }
 const accessListData = JSON.parse(localStorage.getItem('myObject'));
 
