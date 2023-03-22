@@ -1,10 +1,12 @@
+
 var todoList = [];
 
   function saveListData () { 
     localStorage.setItem('myObject', JSON.stringify(todoList));
-    todoList =[]
+    // todoList =[]
 }
 const accessListData = JSON.parse(localStorage.getItem('myObject'));
+
 const todoListElement = document.querySelector("#myUL");
 document.querySelector("#add_button").addEventListener("click", addTodo);
 document.querySelector("#myInput").addEventListener("keypress", function(e) {
@@ -61,24 +63,24 @@ function displayTodos() {
     const delBtn = document.createElement("i");
     const doneList = document.createElement("i");
 
-    listElement.innerHTML = item.todoText;
-    listElement.setAttribute("data-id", item.id);
-    delBtn.setAttribute("data-id", item.id);
-    doneList.setAttribute("data-id",item.id);
+    listElement.innerHTML = todoList[i].todoText;
+    listElement.setAttribute("data-id", todoList[i].id);
+    delBtn.setAttribute("data-id", todoList[i].id);
+    doneList.setAttribute("data-id",todoList[i].id);
 
     delBtn.classList.add("far");
     delBtn.classList.add("fa-trash-can");
     delBtn.classList.add("fa-solid");
-    delBtn.setAttribute("data-id", item.id);
+    delBtn.setAttribute("data-id", todoList[i].id);
 
     doneList.classList.add("farr");
     doneList.classList.add("fa-solid"); 
     doneList.classList.add("fa-clipboard-check");
-    doneList.setAttribute("data-id",item.id);
+    doneList.setAttribute("data-id",todoList[i].id);
  
 
 
-    if (item.isDone) {
+    if (todoList[i].isDone) {
       listElement.classList.add("checked");
     }
 
@@ -97,4 +99,5 @@ function displayTodos() {
     todoListElement.appendChild(listElement);
   
   };
+}
 displayTodos();
