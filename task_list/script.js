@@ -16,12 +16,17 @@ document.querySelector("#myInput").addEventListener("keypress", function(e) {
 
 function addTodo() {
   const todoText = document.querySelector("#myInput").value;
-
+  const index;
   if (todoText == "") {
     alert("You did not enter any item");
   } else {
     todoList = accessListData;
-    const index = todoList.length + 1;
+    if(todoList===null)
+      index = 1;
+    else 
+      index = todoList.length +1;
+      
+    const index = todoList.length;
     saveListData();
     const todoObject = {
       id: index,
@@ -56,8 +61,10 @@ function displayTodos() {
   document.querySelector("#myInput").value = "";
   
   todoList = accessListData;
-  
-   for(let i=0; i < todoList.length;i++) {
+  if(todoList ===null);
+  else {
+  const n = todoList.length + 1;
+   for(let i=0; i < n; i++) {
     const listElement = document.createElement("li");
     const delBtn = document.createElement("i");
     const doneList = document.createElement("i");
@@ -98,5 +105,6 @@ function displayTodos() {
     todoListElement.appendChild(listElement);
   
   };
+}
 }
 displayTodos();
