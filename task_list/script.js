@@ -96,7 +96,5 @@ function displayTodos() {
     listElement.appendChild(doneList);
     todoListElement.appendChild(listElement);
   
-  });
-}
-}
+  };
 displayTodos();
