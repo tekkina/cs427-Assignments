@@ -35,7 +35,6 @@ function addTodo() {
   }
 }
 }
-
 function doneTodo(todoId) {
   const selectedTodoIndex = todoList.findIndex((item) => item.id == todoId);
 
@@ -104,3 +103,4 @@ function displayTodos() {
 }
 }
 displayTodos();
+
