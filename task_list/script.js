@@ -98,4 +98,5 @@ function displayTodos() {
   
   });
 }
+}
 displayTodos();
