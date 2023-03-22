@@ -3,8 +3,7 @@ var todoList = [];
 
   function saveListData () { 
     localStorage.setItem('myObject', JSON.stringify(todoList));
-    todoList =[]
-}
+  }
 const accessListData = JSON.parse(localStorage.getItem('myObject'));
 
 const todoListElement = document.querySelector("#myUL");
@@ -22,10 +21,10 @@ function addTodo() {
     alert("You did not enter any item");
   } else {
     todoList = accessListData;
-    const x = todoList.length + 1;
+    const index = todoList.length + 1;
     saveListData();
     const todoObject = {
-      id: x,
+      id: index,
       todoText: todoText,
       isDone: false,
     };
@@ -58,7 +57,7 @@ function displayTodos() {
   
   todoList = accessListData;
   
-   for(let i=0; i<todoList.length;i++){
+   for(let i=0; i < todoList.length;i++) {
     const listElement = document.createElement("li");
     const delBtn = document.createElement("i");
     const doneList = document.createElement("i");
