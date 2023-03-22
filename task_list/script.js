@@ -1,4 +1,3 @@
-
 var todoList = [];
 
   function saveListData () { 
@@ -79,8 +78,6 @@ function displayTodos() {
     doneList.classList.add("fa-clipboard-check");
     doneList.setAttribute("data-id",todoList[i].id);
  
-
-
     if (todoList[i].isDone) {
       listElement.classList.add("checked");
     }
@@ -103,4 +100,3 @@ function displayTodos() {
 }
 }
 displayTodos();
-
