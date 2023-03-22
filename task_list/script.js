@@ -2,6 +2,7 @@ var todoList = [];
 
   function saveListData () { 
     localStorage.setItem('myObject', JSON.stringify(todoList));
+    todoList =[]
 }
 const accessListData = JSON.parse(localStorage.getItem('myObject'));
 const todoListElement = document.querySelector("#myUL");
@@ -18,8 +19,11 @@ function addTodo() {
   if (todoText == "") {
     alert("You did not enter any item");
   } else {
+    todoList = accessListData;
+    const x = todoList.length + 1;
+    saveListData();
     const todoObject = {
-      id: todoList.length,
+      id: x,
       todoText: todoText,
       isDone: false,
     };
