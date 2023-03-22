@@ -20,8 +20,7 @@ function addTodo() {
     alert("You did not enter any item");
   else {
     todoList = accessListData;
-    if(todoList==null);
-    else {
+    if(todoList!==null){
      const index = todoList.length + 1;
     saveListData();
     const todoObject = {
